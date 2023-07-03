@@ -171,13 +171,24 @@
 	\textls[-50]{\mono{This trapdoor feature of our chosen system is essentially the backbone of all present day cryptography.\linebreak\linebreak
 	}}
 	\textbf{\Large\pbold{RSA CRYPTOGRAPHY}}\linebreak\linebreak
-	\textls[-50]{\mono{RSA protocol is one of the simplest implementations of the trapdoor feature which results in a keypair system (public key and private/secret key). The premise of the RSA protocol essentially lies in setting, i) public key as the qualitative equivalent of the product {\pbold{a}}$\,\times\,${\pbold{b}}, and ii) private key as the qualitative equivalent of either {\pbold{a}} or {\pbold{b}}, where {\pbold{a}} and {\pbold{b}} are restricted to a finite field of prime numbers (denoted by F\textsubscript{prime}). The security of such a system is encoded in the difficulty of prime factorising the product. It is unimportant to know the precise details of the protocol implementation in context of this paper. In nutshell, the RSA algorithm requires solving for the coefficients of Bezout's Identity using extended Euclidean algorithm [2] and employing modular arithmetic to wrap integer numbers when they fall outside the finite prime field F\textsubscript{prime}.\linebreak\linebreak
+	\textls[-50]{\mono{RSA protocol is one of the simplest implementations of the trapdoor feature which results in a keypair system - a public key and a private/secret key - typically utilised in conjunction for encrypting and decrypting information. The premise of the RSA protocol essentially lies in setting, i) public key as the qualitative equivalent of the product {\pbold{a}}$\,\times\,${\pbold{b}}, and ii) private key as the qualitative equivalent of either {\pbold{a}} or {\pbold{b}}, where {\pbold{a}} and {\pbold{b}} are restricted to a finite field of prime numbers (denoted by F\textsubscript{\pbold{p}}). The security of such a system is encoded in the difficulty of prime factorising the product. It is unimportant to know the precise details of the protocol implementation in context of this paper. In nutshell, the RSA algorithm requires solving for the coefficients of Bezout's Identity using extended Euclidean algorithm [2] and employing modular arithmetic to wrap integer numbers when they fall outside the finite prime field F\textsubscript{\pbold{p}}.\linebreak\linebreak
 	}}
 	\textbf{\large\pbold{RSA SAFETY}}\linebreak\linebreak
 	\textls[-50]{\mono{While RSA is sufficiently safe to use today, it's safety will decrease over time as computational capacity of human civilisation increases. This is because the fastest and - arguably - maximally efficient algorithms capable of inverting the {\pbold{a}}$\,\times\,${\pbold{b}} product are iterative by construction and rely on optimised brute-forcing; Quadratic Sieve [3] and General Number Field Sieve [4] are two such well-known methods. With the advent of quantum computers, RSA algorithm's security will be definitively compromised; this is the so called SNDL problem (Save-Now-Decrypt-Later) facing the cryptography community today [5].\linebreak\linebreak 
 	}}
+	\textbf{\large\pbold{RSA TO DIFFIE-HELLMAN}}\linebreak\linebreak
+	\textls[-50]{\mono{Diffie-Hellman Key Sharing Algorithm is another cryptosystem which in some sense is the intermediate step between RSA and ECC since it introduces finite fields over groups other than itself. In simple terms, this means that the group operations of addition and multiplication remain the same but the group elements are now that of a finite cyclic group [6]. The non-invertible term securing the protocol in this case is of the form g\textsuperscript{a} modulo {\pbold{p}},\textsuperscript{\textcolor{blue}{2}}\blfootnote{\textls[-50]{\mono{\textsuperscript{2}g is called the group generator (integer), a is private key (integer) and {\pbold{p}} is a prime number}}} instead of a simple product between two large prime numbers. Breaking the Diffie-Hellman method is thereby different from RSA since it involves inverting g\textsuperscript{a} modulo {\pbold{p}} instead of {\pbold{a}}$\,\times\,${\pbold{b}}; this is known as the discrete logarithm problem.\linebreak\linebreak 
+	}}
 	\textbf{\Large\pbold{ELLIPTIC CURVE CRYPTOGRAPHY}}\linebreak\linebreak
-	\textls[-50]{\mono{The fundamental issue that leads to the breakdown of RSA algorithm is that the prime number field and the operation of multiplication is not complex enough in the face of large computational power. The effort to improve on this problem led to the advent of Elliptic Curve Cryptography (ECC). ECC functions by fixing the core illnesses in RSA, i.e. it proposes that instead of operating on the prime number field itself, we operate on another field on which we define a newer set of operations that are much harder to invert.  \linebreak\linebreak 
+	\textls[-50]{\mono{The fundamental issue that leads to the breakdown of RSA algorithm is that the prime number field and the operation of multiplication is not complex enough in the face of large computational power. The effort to improve on this problem led to the advent of Elliptic Curve Cryptography (ECC). ECC functions by fixing the core illnesses in RSA, i.e. it proposes - similar to Diffie-Hellman - that instead of operating on the prime number field itself, we operate on another field on which we define a newer set of operations that are much harder to invert. Enter Elliptic curves. In context of cryptography, an Elliptic curve is simply the following relation between two finite prime fields (x, y),
+	}}
+\end{flushleft}
+\begin{center}
+	{\mono{y\textsuperscript{2} = x\textsuperscript{3} + px + q.
+	}}
+\end{center}
+\begin{flushleft}
+	\textls[-50]{\mono{The premise of ECC lies in the introduction of finite prime fields over elliptic curves, a step up from finite cyclic groups used in Diffie-Hellman [7]. Elliptic curves possess several highly desirable properties that make them an appropriate choice. 
 	}}
 \end{flushleft}
 \begin{flushleft}
@@ -196,6 +207,12 @@
 		}}
 		\textls[-50]{\mono{
 			[5] SNDL Problem\linebreak
+		}}
+		\textls[-50]{\mono{
+			[6] Diffie-Hellman Key Exchange\linebreak
+		}}
+		\textls[-50]{\mono{
+			[7] Elliptic Curve Cryptography\linebreak
 		}}
 \end{flushleft}
 \begin{flushright}
