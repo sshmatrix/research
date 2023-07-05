@@ -175,13 +175,13 @@
 	\textbf{\Large\pbold{PRIME NUMBERS}}\linebreak\linebreak
 	\textls[-50]{\mono{Cryptographers realised back in the day that prime numbers were one such system that could provide such a functionality. For instance, consider two sufficiently large prime numbers {\pbold{a}} = 53781811 and {\pbold{b}} = 23252729, and their even larger product {\pbold{a}}$\,\times\,${\pbold{b}} = 1250573876312219. The product 1250573876312219 is a relatively difficult number to prime factorise back to {\pbold{a}} and {\pbold{b}} if both {\pbold{a}} and {\pbold{b}} are unknown. However, if either one of the two prime factors ({\pbold{a}} or {\pbold{b}}) are known, then it is straightforward to calculate the other unknown prime factor by simple division. To intuitively understand this system further, let's break it down into its principle components: we took a set of very large prime numbers of which {\pbold{a}} and {\pbold{b}} are members and defined an operation of multiplication\textsuperscript{\textcolor{blue}{1}}\blfootnote{\textls[-50]{\mono{\textsuperscript{1}in addition to implicitly defining the operation of addition '+' and its inverse subtraction '-'}}} on the members of the set; such a finite field is called a Galois field. Additionally, we note that the product operation $\times$ is difficult to invert unless one of the two numbers is known; this kind of a system is usually called a trapdoor.\linebreak\linebreak 
 	}}
-	\colorbox{Gray}{\hspace{1mm}\parbox{1.0\textwidth}{\vspace{1mm}\textls[-50]{\mono{In abstract mathematics, such a system is called a Group and the study of groups is called Group theory; a group is defined by a set of elements (called a Field, e.g. large prime numbers) along with the set of permitted operations between those elements (e.g. multiplication). The configuration of any trapdoor system is such that the permitted operations defined on the elements of the group are difficult to invert.\vspace{1mm}}}}}\linebreak\linebreak
+	\colorbox{Gray}{\hspace{1mm}\parbox{1.0\textwidth}{\vspace{1mm}\textls[-50]{\mono{In abstract mathematics, such a system is called a Group and the study of groups is called Group theory; a group is defined by a set of elements (called a Field, e.g. large prime numbers) along with the set of permitted operations between those elements (e.g. multiplication). The configuration of any trapdoor system is such that the permitted operations defined on the elements of the group are difficult to invert.\vspace{1mm}}}}}\linebreak\linebreak\linebreak
 	\textls[-50]{\mono{This trapdoor feature of our chosen system is essentially the backbone of all present day cryptography.\linebreak\linebreak
 	}}
 	\textbf{\Large\pbold{RSA CRYPTOGRAPHY}}\linebreak\linebreak
 	\textls[-50]{\mono{RSA protocol is one of the simplest implementations of the trapdoor feature which results in a keypair system - a public key and a private/secret key - typically utilised in conjunction for encrypting and decrypting information. The premise of the RSA protocol essentially lies in setting, i) public key as the qualitative equivalent of the product {\pbold{a}}$\,\times\,${\pbold{b}}, and ii) private key as the qualitative equivalent of either {\pbold{a}} or {\pbold{b}}, where {\pbold{a}} and {\pbold{b}} are restricted to a finite field of prime numbers (denoted by F\textsubscript{\pbold{p}}). The security of such a system is encoded in the difficulty of prime factorising the product. It is unimportant to know the precise details of the protocol implementation in context of this paper. In nutshell, the RSA algorithm requires solving for the coefficients of Bezout's Identity using extended Euclidean algorithm [2] and employing modular arithmetic to wrap integer numbers when they fall outside the finite prime field F\textsubscript{\pbold{p}}.\linebreak\linebreak
 	}}
-	\textbf{\large\pbold{RSA SAFETY}}\linebreak\linebreak
+	\textbf{\large\pbold{ROBUSTNESS OF RSA}}\linebreak\linebreak
 	\textls[-50]{\mono{While RSA is sufficiently safe to use today, it's safety will decrease over time as computational capacity of human civilisation increases. This is because the fastest and - arguably - maximally efficient algorithms capable of inverting the {\pbold{a}}$\,\times\,${\pbold{b}} product are iterative by construction and rely on optimised brute-forcing; Quadratic Sieve [3] and General Number Field Sieve [4] are two such well-known methods. With the advent of quantum computers, RSA algorithm's security will be definitively compromised; this is the so called SNDL problem (Save-Now-Decrypt-Later) facing the cryptography community today [5]. The core issue at hand here is that finite prime fields and the generic operation of multiplication on them - irrespective of the largeness of its elements - does not possess sufficient difficulty if the exploitor has relatively large computational resources at hand. In order to design better cryptosystems that are secure against brute-forcing, one must come with a new group with a better choice of finite field and a preferably a harder group operation which is resistant to such an attack.\linebreak\linebreak 
 	}}
 	\textbf{\large\pbold{RSA TO DIFFIE-HELLMAN}}\linebreak\linebreak
@@ -206,16 +206,27 @@
 		}}
 	\end{center}
 	\begin{flushright}
-		{\vspace{-8mm}\mono{(3)}}
+		{\vspace{-8mm}\mono{(1)}}
 	\end{flushright}
 	\textls[-50]{\mono{Typically, x is taken as the independent finite prime field and y is the so-called 'elliptic curve (evaluation) over finite field'; y are the elements of our desired new group. Ignoring the finite field constraint for a moment, the elliptic curve is shown in figure \ref{fig:ecc0} when x is a continuous real variable. Our task now is to come up a hard-to-invert group operation on the continuous elements y of our new group; we will reinstate the finite prime field constraint afterwards.
 	}}
 \end{multicols}
 \begin{flushleft}
-	\textls[-50]{\mono{Gigabrains realised few decades ago that the elliptic curves have some very cool properties in context of invertibile binary operations. To begin with,\linebreak
-	1. the elliptic curve is symmetric across the x-axis; this is a desirable property since it ensures the existence of both y and -y in our group. More importantly, \linebreak\linebreak
-	2. for any two points a and b on the elliptic curve, a line through them intersects the elliptic curve again at most - but not necessarily - 1 more point, denoted by c; the blue line in figure \ref{fig:ecc0} is one such example.\linebreak\linebreak 
-	Note that it is possible for the line to not intersect the curve for the third time at all, and these singularities are in fact necessary for our group to function. Consider, the green line in figure \ref{fig:ecc0}; note that all vertical lines intersect the curve at exactly two points. It is also possible for a tangent to the curve to intersect the curve at exactly two points; see the red line in figure \ref{fig:ecc0}. The aforementioned gigabrains soon realised that one can use this intersectional property of a line with the elliptic curve (aka properties 1. and 2.) as the new group operation $\oplus$ such that
+	\textls[-50]{\mono{Gigabrains realised few decades ago that the elliptic curves have some very cool properties in context of invertibile binary operations. To begin with,\linebreak\linebreak
+	1. the elliptic curve is symmetric across the x-axis; this is a desirable property since it ensures the existence of both y and -y in our group. More importantly,\linebreak\linebreak
+	2. for any two points a and b on the elliptic curve, a line through them intersects the elliptic curve again at most - but not necessarily - 1 more point, denoted by c; the blue line in figure \ref{fig:ecc0} is one such example.
+	}}
+\end{flushleft}
+\begin{multicols}{2}
+	\noindent
+	\begin{minipage}{\linewidth}
+		\centering
+		\includegraphics[width=80mm]{ECC.png}
+		\captionof{figure}{\mono{Elliptic curve over a finite prime field modulo {\pbold{p}}; the effect of the modulo operator \% is to "wrap" the out-of-range values to within range. In the above example, it takes 5 'wrappings' and 1 final reflection to calculate -c.}}
+		\label{fig:ecc1}
+	\end{minipage}
+	\linebreak\linebreak
+	\textls[-50]{\mono{Note that it is possible for the line to not intersect the curve for the third time at all, and these singularities are in fact necessary for our group to function. Consider, the green line in figure \ref{fig:ecc0}; note that all vertical lines intersect the curve at exactly two points. It is also possible for a tangent to the curve to intersect the curve at exactly two points; see one such example (the red line) in figure \ref{fig:ecc0}. The aforementioned gigabrains soon realised that one can use this intersectional property of a line with the elliptic curve (aka properties 1. and 2.) as the new group operation $\oplus$ such that
 	}}
 	\begin{center}
 		\mono{a $\oplus$ b = \,-c}
@@ -223,30 +234,31 @@
 	\begin{flushright}
 		{\vspace{-8mm}\mono{(2)}}
 	\end{flushright}
-	\textls[-50]{\mono{This is the same as saying that $\oplus$ operation between a and b is equivalent to taking reflection (-) of the third intersection point c across x-axis. Most literature phrases this $\oplus$ operation as the new "addition" operation on the group elements of y. However, we noted before that the third intersection c doesn't exist for all pairs a and b; in jargon-speak, we say that 'the group is not closed under the $\oplus$ operation'. We can solve this closeness problem by explicitely including the infinity element $\infty$ to the group. Once we have access to $\infty$, all intersections similar to the green line are assumed to intersect the curve again at c = $\infty$, such that}}
+	\textls[-50]{\mono{This is the same as saying that $\oplus$ operation between a and b is equivalent to taking reflection (-) of the third intersection point c across x-axis. Most literature phrases this $\oplus$ operation as the new "addition" operation on the group elements of y. However, we noted before that the third intersection c doesn't exist for all pairs a and b; in jargon-speak, we say that 'the group is not closed under the $\oplus$ operation'.
+	}}
+\end{multicols}
+\begin{flushleft}
+	\textls[-50]{\mono{We can solve this closeness problem by explicitely including the infinity element $\infty$ to the group. Once we have access to $\infty$, all intersections similar to the green line are assumed to intersect the curve again at c = $\infty$, such that
+	}}
 	\begin{center}
 		\mono{a $\oplus$ $\infty$ = a}
 	\end{center}
 	\begin{flushright}
-		{\vspace{-8mm}\mono{(1)}}
+		{\vspace{-8mm}\mono{(3)}}
 	\end{flushright}
 \end{flushleft}
-\begin{multicols}{2}
-	\noindent
-	\begin{minipage}{\linewidth}
-		\centering
-		\includegraphics[width=80mm]{ECC.png}
-		\captionof{figure}{\mono{Elliptic curve over a finite prime field modulo {\pbold{p}}; the effect of the modulo operator \% is to "wrap" the out-of-range values to within range. In the above example, it takes 5 iterations and 1 reflection to calculate -c.}}
-		\label{fig:ecc1}
-	\end{minipage}
-	\linebreak\linebreak
-	\textls[-50]{\mono{Note that $\infty$ acts like the identity element \^I of our new group since it satisfies a $\oplus$ \^I = a. Lastly, the third case of the red line is not difficult since it is simply a special case of the blue line when b = c. Now we have all the ingredients required to construct a robust inverse problem on our new group y with the permitted operation $\oplus$. We reinstate the requirement of evaluating the elliptic curve on a finite prime field by explicitely defining a finite field range and wrapping the out-of-range evaluations over the elliptic curve with the modulo operator \% {\pbold{p}}. The final form of the $\oplus$ operation is shown in figure \ref{fig:ecc1}. In a real world ECC implementation, this process is carried out a large number of times making the forward process increasingly complex and its inverse increasingly difficult to compute. Some of the common elliptic curves in use today are specifically \code{ed25519} and \code{secp256k1}, with the later being more recent and more robust than the former.
-	}}
-\end{multicols}
 \begin{flushleft}
-	\textls[-50]{\mono{It now appears that we have achieved what we set out to do: we have found a new group who elements are now values y evaluated over the finite prime field F\textsubscript{\pbold{p}} and the new group operation $\oplus$ is very difficult to invert. We note that the result of $\oplus$ operation on the group elements results in a value which is also a member of the group\textsuperscript{\textcolor{blue}{4}}\blfootnote{\textls[-50]{\mono{\textsuperscript{4}group is referred to as 'closed under the operation $\oplus$'}}}; this was not the case in RSA scheme where the result {\pbold{a}}$\,\times\,${\pbold{b}} is never a member of the group. This 'closed' feature of ECC against the 'open' feature of RSA has positive consequences for the algorithm.\linebreak\linebreak
+	\textls[-50]{\mono{Note that $\infty$ acts like the identity element \^I of our new group since it satisfies a $\oplus$ \^I = a. Lastly, the third case of the red line is not difficult since it is simply a special case of the blue line when b = c; another important tangent case arises when a = b, such that a $\oplus$ a = c. Now we have all the ingredients required to construct a robust inverse problem on our new group y with the permitted operation $\oplus$. We reinstate the requirement of evaluating the elliptic curve on a finite prime field by explicitely defining a finite field range and wrapping the out-of-range evaluations over the elliptic curve with the modulo operator \% {\pbold{p}}. The final form of the $\oplus$ operation is shown in figure \ref{fig:ecc1}. In a real world ECC implementation, this process is carried out a large number of times (assuming a = b) making the forward process increasingly complex and the resulting inverse problem increasingly difficult to compute.\linebreak\linebreak
 	}}
-	\colorbox{Gray}{\hspace{1mm}\parbox{1.0\textwidth}{\vspace{1mm}\textls[-50]{\mono{In literature, you will often find the operation $\oplus$ equated to the generic addition $+$. This is not surprising since equations (2) and (3) resemble a + b = c and a + 0 = a for generic real numbers (aka Galois field). Having said that, in practice $\oplus$ operation is nothing like the addition operation $+$; the apparent similarity lies in their algebraic representations only.\vspace{1mm}}}}}
+	\colorbox{Gray}{\hspace{1mm}\parbox{1.0\textwidth}{\vspace{1mm}\textls[-50]{\mono{In literature, you will often find the operation $\oplus$ equated to the generic addition $+$. This is not surprising since equations (2) and (3) resemble a + b = c and a + 0 = a for generic real numbers (aka Galois field). Having said that, in practice $\oplus$ operation is nothing like the addition operation $+$; the apparent similarity lies in their algebraic representations only.\vspace{1mm}}}}}\linebreak\linebreak\linebreak
+	\textls[-50]{\mono{The 'large number of repetitions' is assigned as the secret private key K\textsubscript{sec} and the public key K\textsubscript{pub} is equivalent to calculating (a $\oplus$ a) at a public value a = a\textsubscript{o} repeated N number of times\textsuperscript{\textcolor{blue}{4}}\blfootnote{\textls[-50]{\mono{\textsuperscript{4}a = b assertion is made purely for simplicity since having a $\neq$ b doesn't provide extra security}}}, i.e. K\textsubscript{pub} = (...((a\textsubscript{o} $\oplus$ a\textsubscript{o})\textsubscript{1} $\oplus$ a\textsubscript{o})\textsubscript{2} $\oplus$ a\textsubscript{o})\textsubscript{3} ...)\textsubscript{N}. The exact inverse problem - called the elliptic curve discrete logarithm problem - is equivalent to finding the number of repetitions it took to arrive at K\textsubscript{pub} from a publicly known value a\textsubscript{o}. Some of the common elliptic curves in use today are specifically \code{ed25519} and \code{secp256k1}, with the later being more recent and more robust than the former.\linebreak\linebreak
+	}}
+	\colorbox{Gray}{\hspace{1mm}\parbox{1.0\textwidth}{\vspace{1mm}\textls[-50]{\mono{The name of the inverse problem for ECC, i.e. elliptic curve discrete logarithm problem, is highly misleading and results from purely notational reasons. The term 'logarithm' originates from interpreting the result of N times repetition of (a $\oplus$ a) operation as K\textsubscript{pub} = a\textsuperscript{N}.\vspace{1mm}}}}}\linebreak\linebreak
+	 \textls[-50]{\mono{It now appears that we have achieved what we set out to do: we have found a new group who elements are now values y evaluated over the finite prime field F\textsubscript{\pbold{p}} and the new group operation (...((a\textsubscript{o} $\oplus$ a\textsubscript{o})\textsubscript{1} $\oplus$ a\textsubscript{o})\textsubscript{2} $\oplus$ a\textsubscript{o})\textsubscript{3} ...)\textsubscript{N} ($\equiv$ a\textsubscript{o}\textsuperscript{N}) is very difficult to invert. We note that the result of $\oplus$ operation on the group elements results in a value which is also a member of the group\textsuperscript{\textcolor{blue}{5}}\blfootnote{\textls[-50]{\mono{\textsuperscript{5}group is referred to as 'closed under the operation $\oplus$'}}}; this was not the case in RSA scheme where the result {\pbold{a}}$\,\times\,${\pbold{b}} is never a member of the group.\linebreak\linebreak
+	}}
+	\textbf{\large\pbold{ROBUSTNESS OF ECC}}\linebreak\linebreak
+	\textls[-50]{\mono{
+	}}
 \end{flushleft}
 \begin{flushleft}
 	\textbf{\Large\pbold{REFERENCES}}\linebreak\linebreak
