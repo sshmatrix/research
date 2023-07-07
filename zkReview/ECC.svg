@@ -45,9 +45,9 @@
      objecttolerance="10"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.3594625"
-     inkscape:cx="65.326653"
-     inkscape:cy="87.491355"
+     inkscape:zoom="1.6857256"
+     inkscape:cx="37.452344"
+     inkscape:cy="102.05984"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -69,7 +69,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -96,35 +96,33 @@
     <text
        xml:space="preserve"
        style="font-size:4.37922px;line-height:1.25;font-family:Palatino;-inkscape-font-specification:Palatino;font-variant-ligatures:none;text-align:center;letter-spacing:-0.5px;text-anchor:middle;stroke-width:0.469202"
-       x="258.63934"
-       y="-11.402273"
+       x="262.91013"
+       y="-11.306958"
        id="text1833"
        transform="rotate(-70.726191)"><tspan
          sodipodi:role="line"
          id="tspan1831"
-         x="258.38934"
-         y="-11.402273"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.37922px;font-family:'SF Mono';-inkscape-font-specification:'SF Mono';stroke-width:0.469202"><tspan
-   style="stroke-width:0.469202"
-   id="tspan1845">y</tspan><tspan
+         x="262.66013"
+         y="-11.306958"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.37922px;font-family:'SF Mono';-inkscape-font-specification:'SF Mono';stroke-width:0.469202">y<tspan
    style="font-size:2.84649px;baseline-shift:super;stroke-width:0.469202"
    id="tspan1835">2</tspan><tspan
    style="font-size:2.68202px;stroke-width:0.469202"
    id="tspan1875"> </tspan>=<tspan
    style="font-size:2.68202px;stroke-width:0.469202"
-   id="tspan1873"> </tspan><tspan
-   style="stroke-width:0.469202"
-   id="tspan1849">x</tspan><tspan
+   id="tspan1873"> </tspan>x<tspan
    style="font-size:2.84649px;baseline-shift:super;stroke-width:0.469202"
    id="tspan1837">3</tspan><tspan
    style="font-size:2.68202px;stroke-width:0.469202"
    id="tspan1861"> </tspan>+<tspan
    style="font-size:2.68202px;stroke-width:0.469202"
-   id="tspan1853"> </tspan>ax<tspan
+   id="tspan1853"> </tspan>p<tspan
+   style="font-size:1.33333px"
+   id="tspan911"> </tspan>x<tspan
    style="font-size:2.68202px;stroke-width:0.469202"
    id="tspan1865"> </tspan>+<tspan
    style="font-size:2.68202px;stroke-width:0.469202"
-   id="tspan1869"> </tspan>b</tspan></text>
+   id="tspan1869"> </tspan>q</tspan></text>
     <circle
        style="fill:#0050ff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.271;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:1.084, 0.542, 0.271, 0.542;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers;stop-color:#000000"
        id="path1611-4-9-3-5"
