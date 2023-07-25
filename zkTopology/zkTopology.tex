@@ -1,0 +1,218 @@
+\documentclass[a4paper,10pt]{article}
+
+% ------------------------------------
+% packages
+\usepackage[a4paper,margin=1in,footnotesep=2.2\baselineskip]{geometry}
+\usepackage{multicol}
+\usepackage{xcolor}
+\usepackage{framed}
+\usepackage{emoji}
+\usepackage[most]{tcolorbox}
+\usepackage{fancyhdr}
+\usepackage[tracking=true]{microtype}
+\usepackage{ragged2e}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{pagecolor}
+\usepackage{pdftexcmds}
+\usepackage{geometry}
+\usepackage{upgreek}
+\usepackage{accents}
+\usepackage{caption}
+\captionsetup{
+  font=small,
+  labelfont=bf,
+  tableposition=top
+}
+\captionsetup[figure]{name=\mono{Figure}}
+
+% ------------------------------------
+% checksum = SHA-1
+\makeatletter
+\ifx\pdf@filemdfivesum\undefined\def\pdf@filemdfivesum#{\mdfivesum file}\fi
+\let\filesum\pdf@filemdfivesum
+\makeatother
+
+% ------------------------------------
+% color definitions
+\definecolor{armygreen}{rgb}{0.14, 0.71, 0.15}
+\definecolor{darkgreen}{rgb}{0.08, 0.48, 0.18}
+\definecolor{darkred}{rgb}{0.86, 0.153, 0.153}
+\definecolor{azure}{rgb}{0.0, 0.5, 1.0}
+\definecolor{bole}{rgb}{0.82, 0.57, 0.22}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\definecolor{light-gray}{gray}{0.95}
+\definecolor{bg}{HTML}{fcfcfa}
+\definecolor{bt}{HTML}{ffebe6}
+
+% ------------------------------------
+% code styling
+\definecolor{shadecolor}{RGB}{180,180,180}
+\newcommand{\code}[1]{\colorbox{shadecolor!30}{\mono{#1}}}
+\colorlet{Gray}{gray!20!}
+\tcbset{on line, arc=1pt, leftrule=0.25pt,rightrule=0.25pt,toprule=0.25pt,bottomrule=0.25pt,
+	boxsep=3pt, left=0pt,right=0pt,top=0pt,bottom=0pt,
+	colframe=white,colback=Gray,  
+	highlight math style={enhanced}
+}
+\lstdefinelanguage{Solidity}{
+  %keywords={bool, true, false, return, address, bytes32, bytes4, bytes1, bytes, uint256, uint8, uint, string, if, while, else, case, break},
+  keywords={},
+  keywordstyle=\color{blue}\bfseries,
+  %ndkeywords={function,struct, mapping, export, throw, implements, import, this},
+  ndkeywords={},
+  ndkeywordstyle=\color{darkgreen}\bfseries,
+  identifierstyle=\color{black},
+  sensitive=false,
+  comment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  commentstyle=\color{green}\mono,
+  stringstyle=\color{orange}\mono,
+  morestring=[b]',
+  morestring=[b]",
+  mathescape=true,
+  literate={=>}{$\rightarrow{}$}{1}
+}
+\lstset{
+  backgroundcolor=\color{light-gray},
+  language=Solidity,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\footnotesize\mono},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+% ------------------------------------
+% fonts
+\newfontfamily\pro[Path=./]{SFMono.ttf}
+\newfontfamily\pbold[Path=./]{SFMonoSemiBold.ttf}
+\newfontfamily\mono[Path=./]{SFMono.ttf}
+\newfontfamily\mbold[Path=./]{SFMonoSemiBold.ttf}
+
+% ------------------------------------
+% heading font-size
+\usepackage{sectsty}
+\usepackage{fontspec}
+\sectionfont{\fontsize{12}{15}\selectfont}
+\usepackage[utf8]{inputenc}
+
+% ------------------------------------
+% footnote positioning
+\usepackage[hang,flushmargin,bottom]{footmisc} 
+
+% ------------------------------------
+% bibliography
+\usepackage[colorlinks=true,
+            linkcolor=blue,
+            urlcolor=blue,
+            citecolor=blue,
+            pdfauthor={sshmatrix},
+            pdftitle={Helix2 Protocol},
+            pdfsubject={Link Service and Protocol},
+            pdfkeywords={ethereum, account, abstraction, link, name, decentralised, distributed},
+            pdfproducer={sshmatrix},
+            pdfcreator={sshmatrix}]{hyperref}
+            
+% ------------------------------------
+% blank footnote
+\newcommand\blfootnote[1]{%
+	\begingroup
+	\renewcommand\thefootnote{}\footnote{#1}%
+	\addtocounter{footnote}{-1}%
+	\endgroup
+}
+
+% ------------------------------------
+% header
+\pagestyle{fancy}
+\fancyhf{}
+\lfoot{\footnotesize \mono{\#}\tcbox{\mono{\filesum{\jobname}}}}
+\begin{document}
+\setcounter{footnote}{0}
+\newpage
+\topskip15pt
+
+\fancyhead[L]{\footnotesize \mono{author}:\tcbox{\mono{sshmatrix}}}
+\fancyhead[R]{{\footnotesize \mono{\href{https://github.com/sshmatrix/research}{github.com/sshmatrix/research/zkTopology}}}}
+\fancyhead[C]{{\footnotesize \emoji{dna}}}
+\fancyfoot[C]{{\footnotesize \mono{\thepage}}}
+\fancyfoot[R]{{\footnotesize \mono{\today} \emoji{dna}}}
+
+\begin{center}
+	\textbf{\Large\pbold{\textls[-40]{Topological Interpretation of Elliptic Curves}}}\\
+	\vspace{0.075in}
+	\textls[-50]{\mono{A geometrical approach to understanding finite cyclic groups}}\linebreak\linebreak
+	\vspace{-0.175in}
+	\textls[0]{\mono{Avneet Singh}}\linebreak\linebreak
+	\textls[0]{\mono{Interplanetary Company UG}}\linebreak
+	\textls[0]{\mono{\href{mailto:sshmatrix@proton.me}{sshmatrix@proton.me}}}\linebreak
+\end{center}
+\begin{center}
+	\textbf{\Large\pbold{ABSTRACT}}\linebreak\linebreak
+	\textls[-50]{\mono{}}
+\end{center}
+\vspace{0.2in}
+\begin{flushleft}
+	\textbf{\Large\pbold{INTRODUCTION}}\linebreak\linebreak
+	\textls[-50]{\mono{\linebreak\linebreak
+	}}
+	\colorbox{Gray}{\hspace{1mm}\parbox{0.99\textwidth}{\vspace{1mm}\textls[-50]{\mono{\vspace{1mm}}}}}
+\end{flushleft}
+\begin{flushleft}
+	\textbf{\Large\pbold{REFERENCES}}\linebreak\linebreak
+		\textls[-50]{\mono{
+			[1] Quisquater, JJ. et al. (1990), \href{https://doi.org/10.1007/0-387-34805-0_60}{How to Explain Zero-Knowledge Protocols to Your Children}, Lecture Notes in Computer Science, Vol. 435, Springer, New York, NY\linebreak
+		}}
+		\textls[-50]{\mono{
+			[2] Extended Euclidean Algorithm\linebreak
+		}}
+		\textls[-50]{\mono{
+			[3] Quadratic Sieve Algorithm\linebreak
+		}}
+		\textls[-50]{\mono{
+			[4] General Number Field Sieve Algorithm\linebreak
+		}}
+		\textls[-50]{\mono{
+			[5] SNDL Problem\linebreak
+		}}
+		\textls[-50]{\mono{
+			[6] Diffie-Hellman Key Exchange\linebreak
+		}}
+		\textls[-50]{\mono{
+			[7] Elliptic Curve Cryptography\linebreak
+		}}
+		\textls[-50]{\mono{
+			[8] Elliptic Curve Diffie-Hellman Algorithm\linebreak
+		}}
+		\textls[-50]{\mono{
+			[9] Decisional Diffie-Hellman Problem\linebreak
+		}}
+		\textls[-50]{\mono{
+			[10] Pairing-Based Cryptography; Craig Costello\linebreak
+		}}
+		\textls[-50]{\mono{
+			[11] Pairing-Based Cryptography; Craig Costello\linebreak
+		}}
+\end{flushleft}
+\begin{flushright}
+	\textbf{\large\pbold{METADATA}}\linebreak\linebreak
+	\textls[-50]{\mono{
+		\mono{Github: }\tcbox{}\linebreak
+		\mono{Contracts: }\tcbox{}\linebreak
+		\mono{Source: }\tcbox{}\linebreak
+		\mono{SHA-1 Checksum: }\tcbox{}\linebreak
+		\mono{Date: }\tcbox{\mono{\today}}\linebreak
+	}}
+\end{flushright}
+\end{document}
