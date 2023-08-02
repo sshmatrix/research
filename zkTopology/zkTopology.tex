@@ -52,14 +52,24 @@
 % code styling
 \definecolor{shadecolor}{RGB}{180,180,180}
 \newcommand{\code}[1]{\colorbox{shadecolor!30}{\mono{#1}}}
-\newcommand{\zero}{{$\varnothing$}}
-\newcommand{\one}{{$\aleph$}}
-\newcommand{\two}{3}
-\newcommand{\three}{\uptheta}
-\newcommand{\four}{k}
-\newcommand{\five}{\raisebox{0.55ex}{\naskh{^^^^062d}}}
-\newcommand{\six}{{\hindi{^^^^096d}}}
-\newcommand{\seven}{\raisebox{0.3ex}{\robot{^^^^0434}}}
+\newcommand{\zero}{{\raisebox{-0.7ex}{\LARGE\starg{o}}}}
+
+% ------------------------------------
+% digits
+%\newcommand{\one}{{$\aleph$}}
+%\newcommand{\two}{3}
+%\newcommand{\three}{\uptheta}
+%\newcommand{\four}{k}
+%\newcommand{\five}{\raisebox{0.55ex}{\naskh{^^^^062d}}}
+%\newcommand{\six}{{\hindi{^^^^096d}}}
+%\newcommand{\seven}{\raisebox{0.3ex}{\robot{^^^^0434}}}
+\newcommand{\one}{{\raisebox{-0.7ex}{\LARGE\starg{t}}}}
+\newcommand{\two}{{\raisebox{-0.7ex}{\LARGE\starg{x}}}}
+\newcommand{\three}{{\raisebox{-0.7ex}{\LARGE\starg{e}}}}
+\newcommand{\four}{{\raisebox{-0.7ex}{\LARGE\starg{d}}}}
+\newcommand{\five}{{\raisebox{-0.7ex}{\LARGE\starg{g}}}}
+\newcommand{\six}{{\raisebox{-0.7ex}{\LARGE\starg{j}}}}
+\newcommand{\seven}{{\raisebox{-0.7ex}{\LARGE\starg{y}}}}
 \newcommand{\asserts}{\raisebox{0.10ex}{$\equiv$}}
 \colorlet{Gray}{gray!20!}
 \tcbset{on line, arc=1pt, leftrule=0.25pt,rightrule=0.25pt,toprule=0.25pt,bottomrule=0.25pt,
@@ -113,6 +123,7 @@
 \newfontfamily\naskh[Path=./]{Naskh.ttf}
 \newfontfamily\robot[Path=./]{Roboto.ttf}
 \newfontfamily\victr[Path=./]{VictorMono.ttf}
+\newfontfamily\starg[Path=./]{Stargate.ttf}
 
 % ------------------------------------
 % heading font-size
@@ -314,7 +325,7 @@
 	 {\hspace{4mm}}{\mbold{ii)}} his intuitive interpretation of {\one\,\one} following {\seven} (i.e. first stone in the first column of paired labels) doesn't work if {\one\zero} happens to follow {\seven}. 
 	 
 	 \vspace{2mm}
-	 Bob resists the idea of {\zero} for the longest time; infact, the concept of zero originated much later than the basic airthmetic operations of addition (+), subtraction (-), multiplication ($\times$) and division ($\div$). This is not surprising since these operations do not need zero in their primal definitions. The presence of zero however makes complex combinations (aka 'functions') of (+, -, $\times$, $\div$) much easier to describe/evaluate despite being unintuitive. This eventually led to the acceptance of zero ({\asserts} {\zero} {\asserts} 0) at par with natural numbers about 18,000 years later. In essence, zero makes natural numbers complete or 'whole', thus leading to the term {\mbold{whole numbers}}. In our fictional present however, Bob finds zero too abstract and unintuitive, and doesn't include it in his number system. With time, Bob's number system finds utility in all aspects of life, and being able to count and do basic airthmetic using the 'stone table' lookup in figure \ref{fig:stones} (which later became abacus) becomes equivalent to a Doctorate in Advanced Mathematics. Bob soon realises that he can not only count and describe objects using his system but he can quantify the 'size' of an object (once he assigns one stone unit to a specific size for setting a formal standard). By interpreting the table in \ref{fig:stones} such that each cell now represents the 'size' of an object, Bob discovers the concept of length (units along a string or line), area (units on flat surfaces) and volume (units inside bulky objects). In his native number system, the definition of length is the same as counting stone units along a path, say for example {\seven} units. The definition of area (with side length {\seven}) in his system yields ({\seven} + {\seven\,\times\,\seven}) units and the volume can be counted in ({\seven} + {\seven\,\times\,\seven} + {\seven\,\times\,\seven\,\times\,\seven}) units.\linebreak\linebreak
+	 Bob resists the idea of {\zero} for the longest time; infact, the concept of zero originated much later than the basic airthmetic operations of addition (+), subtraction (-), multiplication ($\times$) and division ($\div$). This is not surprising since these operations do not need zero in their primal definitions. The presence of zero however makes complex combinations (aka 'functions') of (+, -, $\times$, $\div$) much easier to describe/evaluate despite being unintuitive. This eventually led to the acceptance of zero ({\asserts} {\zero} {\asserts} 0) at par with natural numbers about 18,000 years later. In essence, zero makes natural numbers complete or 'whole', thus leading to the term {\mbold{whole numbers}}. In our fictional present however, Bob finds zero too abstract and unintuitive, and doesn't include it in his number system. With time, Bob's number system finds utility in all aspects of life, and being able to count and do basic airthmetic using the 'stone table' lookup in figure \ref{fig:stones} (which later became abacus) becomes equivalent to a Doctorate in Advanced Mathematics. Bob soon realises that he can not only count and describe objects using his system but he can quantify the 'size' of an object (once he assigns one stone unit to a specific size for setting a formal standard). By interpreting the table in \ref{fig:stones} such that each cell now represents the 'size' of an object, Bob discovers the concept of length (units along a string or line), area (units on flat surfaces) and volume (units inside bulk volume). In his native number system, the definition of length is the same as counting stone units along a path, say for example {\seven} units. The definition of area (with side length {\seven}) in his system yields ({\seven} + {\seven\,\times\,\seven}) units and the volume can be counted in ({\seven} + {\seven\,\times\,\seven} + {\seven\,\times\,\seven\,\times\,\seven}) units.\linebreak\linebreak
 	 There is no reason for Bob to stop at multiplication and he can go on to formulate even more complex operations. For instance, recall that Bob derived multiplication from the idea of repetitive 'self-additions'; in the same spirit, Bob can now perform 'self-multiplications' to derive the {\mbold{exponential}} operation, e.g. {\five}\textsuperscript{\seven} = {\five\,\times\,\five\,\times\,\cdot\cdot\cdot\,\raisebox{0.05ex}{\footnotesize{\seven}}\,\cdot\cdot\cdot\,\times\,\five}. Bob is further surprised to note that exponential operation is anti-commutative, non-associative, asymmetric, order-dependent; this isn't the case for either addition or multiplication - both of which are commutative, associative, symmetric and order-agnostic. It appears as if higher-order operations\textsuperscript{\textcolor{blue}{3}}\blfootnote{\textls[-50]{\mono{\textsuperscript{3}{addition = 1-order; multiplication = 2-order; exponential = 3-order}}}} generated from self-operating on lower-order operations leads to unusual behaviour after the second order (=\;2-order).\linebreak\linebreak
 	}}
 	\colorbox{Gray}{\hspace{1mm}\parbox{0.99\textwidth}{\vspace{1mm}\textls[-50]{\mono{Let's take a sanity break and talk in 'normal' mathematical language. Note that in order to count to higher and higher values (more digits), Bob needs keep extending the dimensions of his 'counting box'. The 'counting volume' required to count up to {\upalpha} digits is then written as a series sum ({\seven} + {\seven}\textsuperscript{\two} + {\seven}\textsuperscript{\robot{^^^^03b8}} + \cdot\cdot\cdot\;\,+ {\seven}\textsuperscript{{\upalpha}}). This is somewhat inconvenient. Due to the asymmetric-by-1 nature of Bob's natural number system, many identities tend to have unnecessarily complex forms. In a whole number system however, the counting volume for {\upalpha} digits is simply {\seven}\textsuperscript{\upalpha}; this is equivalent to 10\textsuperscript{{\upalpha}} digits in the decimal system. This finally convinces Bob to accept {\zero} in his counting system, thereby formalising whole numbers as the default counting framework.\vspace{1mm}}}}}\linebreak\linebreak\linebreak\linebreak
