@@ -16,7 +16,7 @@
    version="1.0"
    sodipodi:docname="Stones.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
-   inkscape:export-filename="/Users/sshmatrix/Idee/sshmatrix/Buidl/research/zkTopology/Stones.png"
+   inkscape:export-filename="/Users/sshmatrix/Idee/sshmatrix/Buidl/research/zkTopology/img/Stones.png"
    inkscape:export-xdpi="1200"
    inkscape:export-ydpi="1200">
   <defs
@@ -46,9 +46,9 @@
      objecttolerance="10"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.5010278"
-     inkscape:cx="-7.4564228"
-     inkscape:cy="41.550931"
+     inkscape:zoom="4.2152224"
+     inkscape:cx="47.088625"
+     inkscape:cy="62.354157"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -223,80 +223,80 @@
        sodipodi:nodetypes="cc" />
     <text
        xml:space="preserve"
-       style="font-size:8px;line-height:1.25;font-family:Palatino;-inkscape-font-specification:Palatino;font-variant-ligatures:none;text-align:center;letter-spacing:-1.39px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="font-size:9.86667px;line-height:1.25;font-family:Stargate;-inkscape-font-specification:Stargate;font-variant-ligatures:none;text-align:center;letter-spacing:-1.39px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        x="20.865049"
-       y="-173.86914"
+       y="-173.36954"
        id="text983"><tspan
          sodipodi:role="line"
          id="tspan981"
          x="20.17005"
-         y="-173.86914"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;font-family:'SF Mono';-inkscape-font-specification:'SF Mono';fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">k</tspan></text>
+         y="-173.36954"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.86667px;font-family:Stargate;-inkscape-font-specification:Stargate;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">w</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:8px;line-height:1.25;font-family:Palatino;-inkscape-font-specification:Palatino;font-variant-ligatures:none;text-align:center;letter-spacing:-1.39px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="font-size:9.86667px;line-height:1.25;font-family:Stargate;-inkscape-font-specification:Stargate;font-variant-ligatures:none;text-align:center;letter-spacing:-1.39px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        x="-14.80095"
-       y="-173.86914"
+       y="-173.00554"
        id="text983-3"><tspan
          sodipodi:role="line"
          id="tspan981-9"
          x="-15.49595"
-         y="-173.86914"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;font-family:'SF Mono';-inkscape-font-specification:'SF Mono';fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">3</tspan></text>
+         y="-173.00554"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.86667px;font-family:Stargate;-inkscape-font-specification:Stargate;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">s</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:8px;line-height:1.25;font-family:Palatino;-inkscape-font-specification:Palatino;font-variant-ligatures:none;text-align:center;letter-spacing:-1.39px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="font-size:9.86667px;line-height:1.25;font-family:Stargate;-inkscape-font-specification:Stargate;font-variant-ligatures:none;text-align:center;letter-spacing:-1.39px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        x="2.6330502"
-       y="-173.86914"
+       y="-173.06953"
        id="text983-6"><tspan
          sodipodi:role="line"
          id="tspan981-4"
-         x="1.9380503"
-         y="-173.86914"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;font-family:'SF Mono';-inkscape-font-specification:'SF Mono';fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">θ</tspan></text>
+         x="1.9380504"
+         y="-173.06953"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.86667px;font-family:Stargate;-inkscape-font-specification:Stargate;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">e</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:8px;line-height:1.25;font-family:Palatino;-inkscape-font-specification:Palatino;font-variant-ligatures:none;text-align:center;letter-spacing:-1.39px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="font-size:9.86667px;line-height:1.25;font-family:Stargate;-inkscape-font-specification:Stargate;font-variant-ligatures:none;text-align:center;letter-spacing:-1.39px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        x="-33.233448"
-       y="-173.86914"
+       y="-173.17754"
        id="text983-5"><tspan
          sodipodi:role="line"
          id="tspan981-2"
          x="-33.928448"
-         y="-173.86914"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;font-family:'SF Mono';-inkscape-font-specification:'SF Mono';fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">ℵ</tspan></text>
+         y="-173.17754"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.86667px;font-family:Stargate;-inkscape-font-specification:Stargate;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">y</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:8px;line-height:1.25;font-family:Palatino;-inkscape-font-specification:Palatino;font-variant-ligatures:none;text-align:center;letter-spacing:-1.39px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="font-size:9.86667px;line-height:1.25;font-family:Stargate;-inkscape-font-specification:Stargate;font-variant-ligatures:none;text-align:center;letter-spacing:-1.39px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        x="38.801052"
-       y="-173.86914"
+       y="-172.96153"
        id="text983-2"><tspan
          sodipodi:role="line"
          id="tspan981-5"
          x="38.106052"
-         y="-173.86914"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;font-family:'SF Mono';-inkscape-font-specification:'SF Mono';fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">७</tspan></text>
+         y="-172.96153"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.86667px;font-family:Stargate;-inkscape-font-specification:Stargate;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">x</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:8px;line-height:1.25;font-family:Palatino;-inkscape-font-specification:Palatino;font-variant-ligatures:none;text-align:center;letter-spacing:-1.39px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="font-size:9.86667px;line-height:1.25;font-family:Stargate;-inkscape-font-specification:Stargate;font-variant-ligatures:none;text-align:center;letter-spacing:-1.39px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        x="56.334049"
-       y="-175.86914"
+       y="-173.02954"
        id="text983-4"><tspan
          sodipodi:role="line"
          id="tspan981-91"
-         x="56.334049"
-         y="-175.86914"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;font-family:'SF Mono';-inkscape-font-specification:'SF Mono';fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">ﺡ</tspan></text>
+         x="55.63905"
+         y="-173.02954"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.86667px;font-family:Stargate;-inkscape-font-specification:Stargate;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">g</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:7.57559px;line-height:1.25;font-family:Palatino;-inkscape-font-specification:Palatino;font-variant-ligatures:none;text-align:center;letter-spacing:-1.31626px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.284085;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="font-size:9.86667px;line-height:1.25;font-family:Stargate;-inkscape-font-specification:Stargate;font-variant-ligatures:none;text-align:center;letter-spacing:-1.31626px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.284085;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        x="74.004906"
-       y="-175.28577"
+       y="-173.3586"
        id="text983-4-3"><tspan
          sodipodi:role="line"
          id="tspan981-91-6"
          x="73.346779"
-         y="-175.28577"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.57559px;font-family:'SF Mono';-inkscape-font-specification:'SF Mono';fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.284085;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">д</tspan></text>
+         y="-173.3586"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.86667px;font-family:Stargate;-inkscape-font-specification:Stargate;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.284085;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">t</tspan></text>
   </g>
 </svg>
