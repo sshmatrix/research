@@ -167,7 +167,7 @@
 	\textbf{\Large\pbold{INTRODUCTION}}\linebreak\linebreak
 	\textls[-50]{\mono{Zero-knowledge cryptography (ZKC) is presumably the next natural stage in cryptography's evolution toward post-quantum era. zk-SNARKs and zk-STARKs are specific implementations of zero-knowledge cryptography that are widely considered the most promising path toward post-quantum security. In order to deeply understand zero-knowledge cryptography, one must at least understand the current generation cryptographic systems such as RSA (Rivest–Shamir–Adleman) and Elliptic Curve Cryptography (ECC); this is admittingly a challenging task since the mathematics of such protocols is rather tedious and it only gets exponentially worse as one ventures in zero-knowledge protocols. Despite these challenges, it is nonetheless easier to understand at least the philosophy and intuition behind zero-knowledge protocols using the famous Alibaba Cave example [1] without requiring any prerequisite knowledge of RSA or ECC. We leave this as an exercise for the reader. In this paper, we will attempt to delve into the practical implementation of zero-knowledge protocols while retaining an intuitive understanding of the underlying mathematical processes.\linebreak\linebreak
 	}}
-	\colorbox{Gray}{\hspace{1mm}\parbox{0.99\textwidth}{\vspace{1mm}\textls[-50]{\mono{Through the course of this paper, additional comments in a grey box should be interpreted are anecdotes, comparisons or similariries that may help readers develop an intuitive understanding. In addition, we encourage readers to read this paper in conjunction with [11].\vspace{1mm}}}}}
+	\colorbox{Gray}{\hspace{1mm}\parbox{0.99\textwidth}{\vspace{1mm}\textls[-50]{\mono{Through the course of this paper, additional comments in a grey box should be interpreted are anecdotes, comparisons or similariries that may help readers develop an intuitive understanding. In addition, we encourage readers to read this paper in conjunction with [10].\vspace{1mm}}}}}
 \end{flushleft}
 \begin{flushleft}
 	\textls[-50]{\mono{Cryptographic protocols at their core are motivated by the need to prove access to some information without necessarily revealing a part or the entirety of said information. In mathematical terms, there are several ways of achieving this functionality from an intelligently designed system.\linebreak
@@ -211,14 +211,14 @@
 	\noindent
 	\begin{minipage}{\linewidth}
 		\centering
-		\includegraphics[width=90.10mm]{ellipticCurve.png}
+		\includegraphics[width=90.10mm]{./img/ellipticCurve.png}
 		\captionof{figure}{\textls[-50]{\mono{Elliptic curve over a continuous infinite field, aka a Lie group. We ignore the finite field contraint in this figure for simplicity. Three examples are shown depicting how to interpret different intersectionsof the line with the elliptic curve and the infinity point.}}}
 		\label{fig:ecc0}
 	\end{minipage}
 	\noindent
 	\begin{minipage}{\linewidth}
 		\centering
-		\includegraphics[width=85mm]{ECC.png}
+		\includegraphics[width=85mm]{./img/ECC.png}
 		\captionof{figure}{\textls[-50]{\mono{Example elliptic curve evaluation over a prime finite field modulo {\pbold{p}}; the effect of the modulo operator \% is to "wrap" the out-of-range values to within range. In the above example, it takes 5 'wrappings' and 1 final reflection to calculate -{\pbold{c}}.}}}
 		\label{fig:ecc1}
 	\end{minipage}
@@ -314,7 +314,7 @@
 			[10] Pairing-Based Cryptography; Craig Costello\linebreak
 		}}
 		\textls[-50]{\mono{
-			[11] Pairing-Based Cryptography; Craig Costello\linebreak
+			[11] -\linebreak
 		}}
 \end{flushleft}
 \begin{flushright}
