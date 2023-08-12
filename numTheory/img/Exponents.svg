@@ -16,8 +16,8 @@
    sodipodi:docname="Exponents.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
    inkscape:export-filename="/Users/sshmatrix/Idee/sshmatrix/Buidl/research/numTheory/img/Exponents.png"
-   inkscape:export-xdpi="1200"
-   inkscape:export-ydpi="1200">
+   inkscape:export-xdpi="2400"
+   inkscape:export-ydpi="2400">
   <defs
      id="defs4">
     <inkscape:perspective
@@ -45,9 +45,9 @@
      objecttolerance="10"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.0145657"
-     inkscape:cx="28.084447"
-     inkscape:cy="38.002275"
+     inkscape:zoom="4.0806624"
+     inkscape:cx="93.44272"
+     inkscape:cy="45.620253"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -782,5 +782,48 @@
          x="19.397766"
          y="185.23524"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'SF Mono';-inkscape-font-specification:'SF Mono';fill:#808080;fill-opacity:1;stroke:none;stroke-width:0.0953159;stroke-opacity:1">&gt;</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.50324999999999998px;line-height:1.25;font-family:Palatino;-inkscape-font-specification:Palatino;font-variant-ligatures:none;text-align:center;letter-spacing:-0.09130310000000000px;text-anchor:middle;stroke-width:0.0656859;stroke:#000000;stroke-opacity:0.89411801;"
+       x="-63.348736"
+       y="-182.12222"
+       id="text958"><tspan
+         sodipodi:role="line"
+         id="tspan956"
+         x="-63.394386"
+         y="-182.12222"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'SF Mono';-inkscape-font-specification:'SF Mono';stroke-width:0.0656859;stroke:#000000;stroke-opacity:0.89411801;">a<tspan
+   style="font-size:2.27710999999999997px;baseline-shift:super;stroke-width:0.0656859;stroke:#000000;stroke-opacity:0.89411801;"
+   id="tspan960">b</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.50324999999999998px;line-height:1.25;font-family:Palatino;-inkscape-font-specification:Palatino;font-variant-ligatures:none;text-align:center;letter-spacing:-0.09130310000000000px;text-anchor:middle;stroke-width:0.0656859;stroke:#000000;stroke-opacity:0.89411801;"
+       x="103.20284"
+       y="-182.35097"
+       id="text958-0"><tspan
+         sodipodi:role="line"
+         id="tspan956-9"
+         x="103.15719"
+         y="-182.35097"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'SF Mono';-inkscape-font-specification:'SF Mono';stroke-width:0.0656859;stroke:#000000;stroke-opacity:0.89411801;">b<tspan
+   style="font-size:2.27710999999999997px;baseline-shift:super;stroke-width:0.0656859;stroke:#000000;stroke-opacity:0.89411801;"
+   id="tspan960-3">a</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.50325px;line-height:1.25;font-family:Palatino;-inkscape-font-specification:Palatino;font-variant-ligatures:none;text-align:center;letter-spacing:-0.19px;text-anchor:middle;stroke-width:0.0656859"
+       x="19.859623"
+       y="-196.70459"
+       id="text958-08"><tspan
+         sodipodi:role="line"
+         id="tspan956-4"
+         x="19.859623"
+         y="-196.70459"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'SF Mono';-inkscape-font-specification:'SF Mono';stroke:#000000;stroke-width:0.0656859;stroke-opacity:1"
+         dy="1">central</tspan><tspan
+         sodipodi:role="line"
+         x="19.764624"
+         y="-192.14366"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'SF Mono';-inkscape-font-specification:'SF Mono';stroke:#000000;stroke-width:0.0656859;stroke-opacity:1"
+         id="tspan1018">atom</tspan></text>
   </g>
 </svg>
