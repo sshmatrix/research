@@ -170,7 +170,7 @@
 \topskip15pt
 
 \fancyhead[L]{\footnotesize \mono{author}:\tcbox{\mono{sshmatrix}}}
-\fancyhead[R]{{\footnotesize \mono{\href{https://github.com/sshmatrix/research}{github.com/sshmatrix/research/zkTopology}}}}
+\fancyhead[R]{{\footnotesize \mono{\href{https://github.com/sshmatrix/research}{github.com/sshmatrix/research/numTheory}}}}
 \fancyhead[C]{{\footnotesize \emoji{dna}}}
 \fancyfoot[C]{{\footnotesize \mono{\thepage}}}
 \fancyfoot[R]{{\footnotesize \mono{\today} \emoji{dna}}}
@@ -186,8 +186,7 @@
 \end{center}
 \begin{center}
 	\textbf{\Large\pbold{ABSTRACT}}\linebreak\linebreak
-	\textls[-50]{\mono{This paper is an attempt to introduce number theory to amateur mathematicians and programmers without the use of formal jargon.}}
-	\vspace{25mm}
+	\textls[-50]{\mono{This paper is an attempt to introduce Number theory to amateur mathematicians and programmers without the use of formal jargon. We will introduce number systems in generic bases and formalise the fundamental operations of addition, subtraction, multiplication and division as self-(anti-)replication operations. We will then advance to the exponential operation and prove its non-commutativity, and attempt to prove a handful of famous conjectures in Number theory by Catalan and Fermat in a non-standard yet intuitive manner. We finally conclude this paper by introducing abstract Complex number systems and their interaction with the set of Natural numbers.}}
 \end{center}
 \vspace{0.2in}
 \begin{flushleft}
@@ -451,14 +450,14 @@
 	\noindent
 	\begin{minipage}{\linewidth}
 		\centering
-		\includegraphics[width=78mm]{./img/Exponents.png}\vspace{1mm}
+		\includegraphics[width=78mm]{./img/Exponents.png}\vspace{2mm}
 		\captionof{figure}{\textls[-50]{\mono{Proof consists of recognising the central atom and proving its conditional ? = >. We then prove that the conditionals to the right of the central atom are also ? = >, followed by proving that some of the conditionals on the left extend the trend from righthand side, such that ? = > for p\textsubscript{k} < k and ? = < otherwise.}}}
 		\label{fig:exponents}
 	\end{minipage}
 	\linebreak
 \end{multicols}
 \begin{flushleft}
-	\textls[-50]{\mono{We can continue to do this and evaluate the 'cross over' point p\textsubscript{k} for each k such that p\textsubscript{k} = (1,\;4,\;7,\;9,\;12,\;15,\;18\;{\cdot\cdot\cdot}) for k = (2,\;3,\;4,\;5,\;6,\;7,\;8\;{\cdot\cdot\cdot}). Without getting caught in empirical details (see figure \ref{fig:crosses}), we can conclude that k\textsuperscript{p\,+\,1} - (k + 1)\textsuperscript{p} > 0 for all p < k for all k > 2. The case of k = 2 is again an exception similar to the previous analysis; for k = 2, p = 1 < k = 2. With this assertion, we have proved that ? = > for all terms to the right of \textcolor{blue}{>} in equations (7) and (8)! In fact, our previous proof of the central atom in (7) is a special cases of p = k - 1 < k. Now (7) and (8) can be updated as follows:
+	\textls[-50]{\mono{We can continue to do this and evaluate the 'cross over' point p\textsubscript{k} for each k such that p\textsubscript{k} = (1,\;4,\;7,\;9,\;12,\;15,\;18\;{\cdot\cdot\cdot}) for k = (2,\;3,\;4,\;5,\;6,\;7,\;8\;{\cdot\cdot\cdot}). Without getting caught in empirical details (see figure \ref{fig:crosses}), we can conclude that k\textsuperscript{p\,+\,1} - (k + 1)\textsuperscript{p} > 0 for all p < k for all k > 2. The case of k = 2 is again an exception similar to the previous analysis; for k = 2, p = 1 < k = 2. With this assertion, we have proved that ? = > for all terms to the right of \textcolor{blue}{>} in equations (7) and (8)! In fact, our previous proof of the central atom in (7) is a special cases of p = k - 1 < k. Now (7), (8) can be updated as follows:
 	\vspace{2mm}
 	\begin{center}
 	a\textsuperscript{b} ? (a + 1)\textsuperscript{b\,-\,1} ? {\cdot\cdot\cdot} ? k\textsuperscript{k\,+\,1} \textcolor{blue}{>} (k + 1)\textsuperscript{k} \textcolor{blue}{>} {\cdot\cdot\cdot} \textcolor{blue}{>} (b + 1)\textsuperscript{a\,-\,1} \textcolor{blue}{>} b\textsuperscript{a},
