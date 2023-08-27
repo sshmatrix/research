@@ -192,8 +192,8 @@
 	\textbf{\Large\pbold{INTRODUCTION}}\linebreak\linebreak
 	\textls[-50]{\mono{This paper is intended as a standalone appendix to the main paper titled 'Intuitive Interpretation of Non-Interactive Zero-Knowledge Cryptography' [1]. The main paper deals with pretty much the entire field of cryptography starting from basic RSA to advanced Zero-Knowledge algorithms. In interest of conciseness, several important aspects of Elliptic curves couldn't be discussed in detail in the main paper; this document is an attempt to address those shortcomings for the overtly inclined reader. We'll also touch some peripheral topics that have tied number theory and elliptic curves at the hip. Having said that, we'll follow the same theme as the main paper and avoid jargon like plague.\linebreak\linebreak\linebreak
 	}}
-	\textbf{\Large\pbold{TO ELLIPTIC CURVES}}\linebreak\linebreak
-	\textls[-50]{\mono{The hint is in the name. Elliptic curves are related to ellipses and their discovery was 'accidental' so to speak; most of the initial work toward elliptic curves was done by Newton, Legendre, Fermat, Euler, Abel and Jacobi. In simple terms, an elliptic curve is a paramterisation of an ellipse's circumference or arc length and it easily derivable. To begin with, consider an ellipse described by  its semi-major and -minor axis lengths of {\upalpha} and {\upgamma} (=\;1), i.e. eccentricity e\textsuperscript{2} = 1 - {1/\upalpha}\textsuperscript{2}. Such an ellipse is described by: ${\text{(1 - e\textsuperscript{2})}}\,{\text{x\textsuperscript{2}}} + \text{y\textsuperscript{2} = 1}$. We can simplify it further by safely\textsuperscript{\textcolor{blue}{1}}\blfootnote{\textls[-50]{\mono{\textsuperscript{1}{such that the values of both e and k lie between 0 and 1, aka [0, 1]}}}} replacing the constant 1 - e\textsuperscript{2} with k\textsuperscript{2}, yielding $\text{y\textsuperscript{2} = 1 - {\text{k\textsuperscript{2}}}\,{\text{x\textsuperscript{2}}}}$. Let's try to calculate the circumference C(k) of this ellipse; this will equivalent to integrating ({\updelta}x\textsuperscript{2} + {\updelta}y\textsuperscript{2})\textsuperscript{1/2} along the curve in one of the four cartesian quarters and then multiplying it by 4. This results in
+	\textbf{\Large\pbold{ARC-LENGTH OF AN ELLIPSE}}\linebreak\linebreak
+	\textls[-50]{\mono{The hint is in the name. Elliptic curves are related to ellipses and their discovery was 'accidental' so to speak; most of the initial work toward elliptic curves was done by Newton, Legendre, Fermat, Euler, Abel and Jacobi. In simple terms, an elliptic curve is a paramterisation of an ellipse's circumference or arc length and it easily derivable. To begin with, consider an ellipse described by  its semi-major and -minor axis lengths of {\upalpha} and {\upgamma} (=\;1), i.e. eccentricity e\textsuperscript{2} = 1 - {1/\upalpha}\textsuperscript{2}. Such an ellipse is described by: ${\text{(1 - e\textsuperscript{2})}}\,{\text{x\textsuperscript{2}}} + \text{y\textsuperscript{2} = 1}$. We can simplify it further by safely\textsuperscript{\textcolor{blue}{1}}\blfootnote{\textls[-50]{\mono{\textsuperscript{1}{such that the values of both e and k lie between 0 and 1, aka [0, 1]}}}} replacing the constant 1 - e\textsuperscript{2} with k\textsuperscript{2}, yielding $\text{y\textsuperscript{2} = 1 - {\text{k\textsuperscript{2}}}\,{\text{x\textsuperscript{2}}}}$. Let's try to calculate the circumference C(k) of this ellipse; this will be equivalent to integrating ({\updelta}x\textsuperscript{2} + {\updelta}y\textsuperscript{2})\textsuperscript{1/2} along the curve in one of the four cartesian quarters and then multiplying it by 4. This results in
 	\vspace{4mm}
 	\begin{center}
 	C(e) = 4\,{\Large\robot{^^^^2211}}\;({\updelta}x\textsuperscript{2} + {\updelta}y\textsuperscript{2})\textsuperscript{1/2}, for x = [0, {\upalpha}], 
@@ -209,7 +209,7 @@
 		{\vspace{-8mm}\mono{(2)}}
 	\end{flushright}
 	\vspace{2mm}
-	This is already the {\mbold{elliptic integral}} of the second kind{\textsuperscript{\textcolor{blue}{2}}\blfootnote{\textls[-50]{\mono{\textsuperscript{2}{'second kind' due to the presence of {\uptheta} in the numerator in its parameterised form; 'first kind' has 1 in the numerator}}}}} and it is particularly difficult to evaluate analytically. When e = 1 (k = 0), it is straightforward and evaluates to 4$\text{\upalpha}$ as expected. When e = 0 (i.e. circles; k = 1), it is also relatively straightforward and evaluates naturally to
+	This is already the {\mbold{elliptic integral}} of the second kind{\textsuperscript{\textcolor{blue}{2}}\blfootnote{\textls[-50]{\mono{\textsuperscript{2}{'second kind' due to the presence of {\uptheta} in the numerator in its parameterised form; 'first kind' has 1 in the numerator}}}}} and it is particularly difficult to evaluate analytically. When e = 1 (i.e. straight lines; k = 0), it is straightforward and evaluates to 4$\text{\upalpha}$ as expected. When e = 0 (i.e. circles; k = 1), it is also relatively straightforward and evaluates naturally to
 	\vspace{2mm}
 	\begin{center}
 	C(e)\textsubscript{k\,=\,1} = 4\upalpha\,{{\Large\robot{^^^^2211}}\hspace{0.3mm}\textsuperscript{\textsuperscript{\scriptsize{1}}}}{\hspace{-1.8mm}\textsubscript{\textsubscript{\scriptsize{0}}}}$\displaystyle\frac{\text{1}}{\text{(1 - x\textsuperscript{2})\textsuperscript{1/2}}}$\,{\updelta}x = 4\upalpha\,{{\Large\robot{^^^^2211}}\hspace{0.3mm}\textsuperscript{\textsuperscript{\scriptsize{1}}}}\hspace{-1.8mm}{\textsubscript{\textsubscript{\scriptsize{0}}}}\;sin\textsuperscript{-1}(x) = 2{\uppi}\upalpha.
@@ -227,7 +227,7 @@
 		{\vspace{-8mm}\mono{(3)}}
 	\end{flushright}
 	\vspace{2mm}
-	In strict sense, the inverse of the integrand in the elliptic integral (2)-(3) is already the elliptic curve, but it is not straightforward to interpret in this form. In order to arrive at a more intuitive and interpretive form of elliptic curve, we perform a paramterisation of the form {\uptheta}\textsuperscript{n} = 1 - e\textsuperscript{2}x\textsuperscript{2}. Let's consider in particular the parametrisation for n = 1, such that {\uptheta} = 1 - e\textsuperscript{2}x\textsuperscript{2}. This leads to
+	In strict sense, the inverse of the integrand in the elliptic integral (2)-(3) is already the elliptic curve, but it is not straightforward to interpret in this form. In order to arrive at a more intuitive and interpretive form of elliptic curve, we perform a parameterisation of the form {\uptheta}\textsuperscript{n} = 1 - e\textsuperscript{2}x\textsuperscript{2}. Let's consider in particular the parametrisation for n = 1, such that {\uptheta} = 1 - e\textsuperscript{2}x\textsuperscript{2}. This leads to
 	\vspace{2mm}
 	\begin{center}
 	C(k) = $\displaystyle\frac{\text{1}}{\text{2}}$\,{{\Large\robot{^^^^2211}}\textsuperscript{\textsuperscript{\scriptsize{1}}}}{\hspace{-1.8mm}\textsubscript{\textsubscript{\scriptsize{k}\textsuperscript{2}}}}\;\hspace{-1.5mm}$\displaystyle\frac{\text{{\uptheta}}}{\text{[\uptheta({\uptheta} - k\textsuperscript{2})({\uptheta} - 1)]}\textsuperscript{\textsuperscript{\scriptsize{1/2}}}}$\,{\updelta}{\uptheta} = $\displaystyle{-}\frac{\text{\mbold{i}}}{\text{2}}$\,{{\Large\robot{^^^^2211}}\textsuperscript{\textsuperscript{\scriptsize{1}}}}{\hspace{-1.8mm}\textsubscript{\textsubscript{\scriptsize{k}\textsuperscript{2}}}}\;\hspace{-1.5mm}$\displaystyle\frac{\text{{\uptheta}}}{\text{\,E(\uptheta)}}$\,{\updelta}{\uptheta},
@@ -237,42 +237,50 @@
 	\end{flushright}
 	\vspace{2mm}
 	where {\mbold{i}} is the usual complex unit, i.e. {\mbold{i}} = $\sqrt{\text{-1}}$. The 3-order polynomial term in the denominator is of the form
-	\vspace{2mm}
-	\begin{center}
-	{E\textsuperscript{2}(\uptheta)} = {\uptheta}\textsuperscript{3} + r\cdot\,{\uptheta}\textsuperscript{2} + p\,\cdot\,{\uptheta} + q,
-	\end{center} 
 	}}
 \end{flushleft}
 \vspace{2mm}
 \begin{multicols}{2}
 	\noindent
-	\textls[-50]{\mono{which is precisely the more recognisable form of the {\mbold{elliptic curve}}! Note that the form of {E({\uptheta})} in the above example asserts three roots of {E(\uptheta)}, i.e. 0, k\textsuperscript{2}, 1. This is however not true for generic elliptic curves which may have only one real root depending on the values of p, q and r, all of which are functions of k in return. In our particular example, r = -(1 + k\textsuperscript{2}), p = k\textsuperscript{2} and q = 0. Some readers may feel cheated at this point since we have just said that an elliptic curve is simply the square root of a cubic polynomial! This is indeed correct but not every cubic polynomial is an elliptic curve; the coefficients of the cubic polynomial must be such that there are no repeated roots, i.e. they represent a legitimate ellipse with legal values of e\textsuperscript{2} and k\textsuperscript{2}.
-	}}
+	\begin{minipage}{\linewidth}
+		\centering
+		\includegraphics[width=60mm]{./img/ellipticSquare.png}\vspace{1mm}
+		\captionof{figure}{\textls[-50]{\mono{Polynomial {E\textsuperscript{2}(\uptheta)} with one and three real root(s) in $\mathbb{R}$ space}}}
+		\label{fig:ci}
+	\end{minipage}
 	\noindent
 	\begin{minipage}{\linewidth}
 		\centering
 		\includegraphics[width=60mm]{./img/ellipticCurve.png}\vspace{1mm}
-		\captionof{figure}{\textls[-50]{\mono{Family of projected curves with one and three real root(s) in $\mathbb{R}$ space}}}
+		\captionof{figure}{\textls[-50]{\mono{Family of curves {E(\uptheta)} with one and three real root(s) in $\mathbb{R}$ space}}}
 		\label{fig:ec}
 	\end{minipage}
-	\linebreak
 \end{multicols}
-\begin{flushleft}
-	\textls[-50]{\mono{Lastly, we note that the if the elliptic curve has 3 real roots, then evaluation of (4) requires integrating {E(\uptheta)} in the range (k\textsuperscript{2}, 1) where it is purely complex! In other words, figure \ref{fig:ec} doesn't paint the entire picture of elliptic curves with three real roots instead of one. To fully grasp the topological intuition behind {E(\uptheta)}, we must include the complex plane in our graphics.
+\begin{flushleft} 
+	\textls[-50]{\mono{
+	\vspace{-5mm}
+	\begin{center}
+		{E\textsuperscript{2}(\uptheta)} = {\uptheta}\textsuperscript{3} + r\cdot\,{\uptheta}\textsuperscript{2} + p\,\cdot\,{\uptheta} + q,
+	\end{center}
+	\vspace{2mm}
+	which is precisely the more familiar and recognisable form of the {\mbold{elliptic curve}}! Note that the form of {E({\uptheta})} in the above example asserts three roots of {E(\uptheta)}, i.e. 0, k\textsuperscript{2}, 1. This is however not true for generic elliptic curves which may have only one real root depending on the values of p, q and r, all of which are functions of k in return. In our particular example, r = -(1 + k\textsuperscript{2}), p = k\textsuperscript{2} and q = 0. Some readers may feel cheated at this point since we have just said that an elliptic curve is simply the square root of a cubic polynomial! This is indeed correct but not every cubic polynomial is an elliptic curve; the coefficients of the cubic polynomial must be such that there are no repeated roots, i.e. they represent a legitimate ellipse with legal values of e\textsuperscript{2} and k\textsuperscript{2}. Lastly, we note that the if the elliptic curve has 3 real roots, then evaluation of (4) requires integrating {E(\uptheta)} in the range (k\textsuperscript{2}, 1) where it is purely complex! In other words, figure \ref{fig:ec} doesn't paint the entire picture of elliptic curves with three real roots instead of one. To fully grasp the topological intuition behind {E(\uptheta)}, we must include the complex plane in our graphics. We also make a note of the parameterisation {\uptheta} = 1 - e\textsuperscript{2}x\textsuperscript{2} that led to the easier form of the elliptic curve in (4); what led to this choice? 
 	\linebreak\linebreak\linebreak
-	\textbf{\Large\pbold{\textls[0]{INITIATION BY JACOBI}}}\linebreak\linebreak
+	\textbf{\Large\pbold{\textls[0]{ABEL'S INTUITION}}}\linebreak\linebreak
 	It was Abel who first understood that the inverse of the intergal in (2a) is periodic and more relevant than the intergal itself, i.e.
 	\vspace{2mm}
 	\begin{center}
-	F\textsuperscript{-1}($\bar{\text{x}}$) = 1\,/\,{{\Large\robot{^^^^2211}}\hspace{0.3mm}\textsuperscript{\textsuperscript{\scriptsize{$\bar{\text{x}}$}}}}{\hspace{-1.8mm}\textsubscript{\textsubscript{\scriptsize{0}}}}$\displaystyle\frac{\text{1}}{\text{(1 - x\textsuperscript{2})\textsuperscript{1/2}}}$\,{\updelta}x = sin\textsuperscript{-1\textsuperscript{\scriptsize{-1}}}($\bar{\text{x}}$) = sin($\bar{\text{x}}$),
+	F\textsuperscript{-1}($\bar{\text{x}}$) = 1\,/\,{{\Large\robot{^^^^2211}}\hspace{0.3mm}\textsuperscript{\textsuperscript{\scriptsize{$\bar{\text{x}}$}}}}{\hspace{-1.8mm}\textsubscript{\textsubscript{\scriptsize{0}}}}$\displaystyle\frac{\text{1}}{\text{(1 - x\textsuperscript{2})\textsuperscript{1/2}}}$\,{\updelta}x = sin\textsuperscript{-1\textsuperscript{\scriptsize{-1}}}($\bar{\text{x}}$) = sin($\bar{\text{x}}$).
 	\end{center}
 	\begin{flushright}
 		{\vspace{-8mm}\mono{(5)}}
 	\end{flushright}
 	\vspace{2mm}
+	Abel crucially formalised the definitions of inverses of trigonometric functions using definite integrals and differential/intergal calculus developed by Newton more than 150 years prior.
+	\linebreak\linebreak\linebreak
+	\textbf{\Large\pbold{\textls[0]{JACOBI'S BREAK}}}\linebreak\linebreak
 	Legendre in the past had re-arranged equation (2) in another form which turned out to be more useful for Jacobi. Legendre's form of (2) simply reads
 	\begin{center}
-	C(e) = 4\upalpha\,{{\Large\robot{^^^^2211}}\textsuperscript{\textsuperscript{\scriptsize{1}}}}{\hspace{-1.8mm}\textsubscript{\textsubscript{\scriptsize{0}}}}\;$\displaystyle\frac{\text{1 - e\textsuperscript{2}x\textsuperscript{2}}}{\text{[(1 - x\textsuperscript{2})(\text{1 - e\textsuperscript{2}x\textsuperscript{2}})]\textsuperscript{\textsuperscript{\scriptsize{1/2}}}}}$\,{\updelta}x,
+	C(e) = {4\resizebox{6.5px}{4.5px}{\upalpha}}\,{{\Large\robot{^^^^2211}}\textsuperscript{\textsuperscript{\scriptsize{1}}}}{\hspace{-1.8mm}\textsubscript{\textsubscript{\scriptsize{0}}}}\;$\displaystyle\frac{\text{1 - e\textsuperscript{2}x\textsuperscript{2}}}{\text{[(1 - x\textsuperscript{2})(\text{1 - e\textsuperscript{2}x\textsuperscript{2}})]\textsuperscript{\textsuperscript{\scriptsize{1/2}}}}}$\,{\updelta}x,
 	\end{center}
 	\begin{flushright}
 		{\vspace{-8mm}\mono{(6)}}
@@ -294,9 +302,39 @@
 		{\vspace{-8mm}\mono{(8)}}
 	\end{flushright}
 	\vspace{2mm}
-	which is eerily innocent-looking and quite similar to (3) except that the integrand is inverted. This particular form of the elliptic integral of the first kind circle is where Jacobi made the first meaningful step toward parameterising generic elliptic curves. While generalising the integral F(x) to F(e,\,x) for non-zero e, Jacobi concluded that he didn't in fact need to solve the integral but instead simply attempt to gauge its properties (e.g. periodicity) by analysing the integrant. Jacobi's playtime revealed that the symmetric appearance of the terms e\textsuperscript{2} and x\textsuperscript{2} in the general elliptic integral equates to a bi-periodic function with complex periods! In simpler words, equation (7) is double-periodic with both periods ($\hat{\upomega}$\textsubscript{1},\,$\hat{\upomega}$\textsubscript{2}\;{$\in$}\;{$\mathbb{C}$}) being complex numbers, such that C($\bar{\text{x}}$) = C($\bar{\text{x}}$ + n\textsubscript{1}\,\cdot\,$\hat{\upomega}$\textsubscript{1}) = C($\bar{\text{x}}$ + n\textsubscript{2}\,\cdot\,$\hat{\upomega}$\textsubscript{2}), where $\hat{\upomega}$\textsubscript{1} and $\hat{\upomega}$\textsubscript{2} must necessarily be linearly-independent in {$\mathbb{R}$}, aka they are not mutually related by  $\hat{\upomega}$\textsubscript{1}\,{\robot{^^^^2260}}\;{$\mathbb{R}$}\,\cdot\,$\hat{\upomega}$\textsubscript{2}. Jacobi had arrived at this result after he fucked around with C($\bar{\text{x}}$) and assumed it to be a sine-inverse-like function{\textsuperscript{\textcolor{blue}{2}}\blfootnote{\textls[-50]{\mono{\textsuperscript{2}{due to the said integral being literally sin\textsuperscript{-1}($\bar{\text{x}}$) for e = 0}}}}} (denoted sin\textsuperscript{-1}\hspace{-3.0mm}\textsubscript{L}\hspace{1.3mm}$\bar{\text{x}}$), and found out that it did in fact have properties similar to a sinusoid such as periodicity. This however wasn't the most important assertion; Jacobi further found that no single-variable function could possibly have more than two independent complex periods, and all except elliptic integrals of the first and second (and third) kind have at most one period only! This was arguably the first solid proof that elliptic integrals were a special class of functions. What about the values of $\hat{\upomega}$\textsubscript{1} and $\hat{\upomega}$\textsubscript{2} though?\linebreak\linebreak\linebreak
+	which is eerily innocent-looking and quite similar to (3) except that the integrand is inverted. This particular form of the elliptic integral of the first kind circle is where Jacobi made the first meaningful step toward parameterising generic elliptic curves. While generalising the integral F(x) to F(e,\,x) for non-zero e, Jacobi concluded that he didn't in fact need to solve the integral but instead simply attempt to gauge its properties (e.g. periodicity) by analysing the integrand. Jacobi's playtime revealed that the symmetric appearance of the terms e\textsuperscript{2} and x\textsuperscript{2} in the general elliptic integral equates to a bi-periodic function with complex periods! In simpler words, equation (7) is double-periodic with both periods ($\hat{\upnu}$\textsubscript{1},\,$\hat{\upnu}$\textsubscript{2}\;{$\in$}\;{$\mathbb{C}$}) being complex numbers, such that 
+	\begin{center}
+	C($\bar{\text{x}}$) = C($\bar{\text{x}}$ + n\textsubscript{1}\,\cdot\,$\hat{\upnu}$\textsubscript{1}) = C($\bar{\text{x}}$ + n\textsubscript{2}\,\cdot\,$\hat{\upnu}$\textsubscript{2}),
+	\end{center}
+	\begin{flushright}
+		{\vspace{-8mm}\mono{(8)}}
+	\end{flushright}
+	\vspace{2mm}
+	where $\hat{\upnu}$\textsubscript{1} and $\hat{\upnu}$\textsubscript{2} must necessarily be linearly-independent in {$\mathbb{R}$}, aka they are not mutually related by  $\hat{\upnu}$\textsubscript{1}\,{\robot{^^^^2260}}\;{$\mathbb{R}$}\,\cdot\,$\hat{\upnu}$\textsubscript{2}. Jacobi had arrived at this result after he fucked around with C($\bar{\text{x}}$) and assumed it to be a sine-inverse-like function{\textsuperscript{\textcolor{blue}{2}}\blfootnote{\textls[-50]{\mono{\textsuperscript{2}{due to the said integral being literally sin\textsuperscript{-1}($\bar{\text{x}}$) for e = 0}}}}} (denoted sin\textsuperscript{-1}\hspace{-3.0mm}\textsubscript{L}\hspace{1.3mm}$\bar{\text{x}}$), and found out that it did in fact have properties similar to a sinusoid such as periodicity. This however wasn't the most important assertion; Jacobi further found that no single-variable function could possibly have more than two independent complex periods, and all except elliptic integrals of the first and second (and third) kind have at most one period only! This was arguably the first solid proof that elliptic integrals were a special class of functions. What about the values of $\hat{\upnu}$\textsubscript{1} and $\hat{\upnu}$\textsubscript{2} though?\linebreak\linebreak\linebreak
 	\textbf{\Large\pbold{\textls[0]{COMPLEX DOMAIN}}}\linebreak\linebreak
-	We are now at a point where we cannot avoid complex numbers any further. We faced them while trying to evaluate the elliptic integral when {E($\uptheta$)} had three real roots. Now we are facing them yet again when trying to retrace Jacobi's steps. Eisenstein was first to truly accept that it is perhaps better to begin the description of elliptic integrals in the complex space and then project the findings in the real space, instead of trying to analyse it all in real space alone. We will get there in the next section but we must first introduce complex numbers and particularly n-dimensional lattices in complex space, both of which are necessary to understand bi-periodic functions with complex periods.
+	We are now at a point where we cannot avoid complex numbers any further. We faced them while trying to evaluate the elliptic integral when {E($\uptheta$)} had three real roots. Now we are facing them yet again when trying to retrace Jacobi's steps. Eisenstein was first to truly accept that it is perhaps better to begin the description of elliptic integrals in the complex space and then project the findings in the real space, instead of trying to analyse it all in real space alone. We will get there in the next section but we must first introduce complex numbers and particularly n-dimensional lattices in complex space, both of which are necessary to understand bi-periodic functions with complex periods.\linebreak\linebreak
+	Periodicity in real space $\mathbb{R}$ is simple to understand topologically. Complex numbers on the other hand behave as vectors in geometrical sense, and therefore periodicity in a vector space must be understood. For example, consider equation (8) defining periodicity in complex space with periods $\hat{\upnu}$\textsubscript{1} and $\hat{\upnu}$\textsubscript{2}. Consider any one of the periods $\hat{\upnu}$\textsubscript{1} to begin with and calculate a few iterations of of $\bar{\text{x}}$ + n\textsubscript{1}\,\cdot\,$\hat{\upnu}$\textsubscript{1} for a few values of n\textsubscript{1} = 1, 2,\;...\;6. We find that the corresponding vectors all lie on a straight line in the complex plane parallel to $\hat{\upnu}$\textsubscript{1}; these points are shown in figure 3 with their indices. In the same way, the vectors associated with the second period also generate a straight line with a different slope parallel to $\hat{\upnu}$\textsubscript{2}. The two sets of points lying on lines of unequal slope in the complex plane form a lattice, denoted by $\hat{\upnu}$\textsubscript{1}\,{\times}\,$\hat{\upnu}$\textsubscript{2}, such that the bi-periodic function is also periodic on the lattice. The trivial extension of this is that when both periods are linearly-dependent, the lattice is in fact just a straight line. Recall that for a mono-periodic real functions such as sin(x), its parameterised form is a closed curve (a circle). In other words, a mono-periodic function parameterises to a closed curve in 2-dimensional space. In the same way, a bi-periodic function parameterises to a closed surface in 3-dimensional space. Does this mean that a bi-periodic C($\bar{\text{x}}$) is a closed surface in complex hyper-plane{\textsuperscript{\textcolor{blue}{2}}\blfootnote{\textls[-50]{\mono{\textsuperscript{2}{Hyper-plane refers to the (N + 1)-dimensional space that parameterises the periodic N-dimensional function}}}}}? Yes. How does this surface look? Figure 4 shows a visualisation of the parameterisation similar to how a circle can be obtained by parameterising a sinusoid by {\uptheta}. The form of a bi-periodic C($\bar{\text{x}}$) is a complex torus, the only closed surface capable of bi-periodicity in three dimensions.
+	}}
+\end{flushleft}
+\vspace{2mm}
+\begin{multicols}{2}
+	\noindent
+	\begin{minipage}{\linewidth}
+		\centering
+		\includegraphics[width=75mm]{./img/complexPeriods.png}\vspace{1mm}
+		\captionof{figure}{\textls[-50]{\mono{Complex lattice generated by a bi-periodic function with two linearly-independent complex periods}}}
+		\label{fig:ci}
+	\end{minipage}
+	\noindent
+	\begin{minipage}{\linewidth}
+		\centering
+		\includegraphics[width=75mm]{./img/complexTorus.png}\vspace{1mm}
+		\captionof{figure}{\textls[-50]{\mono{Parameterisation of a complex lattice generated by a bi-periodic function}}}
+		\label{fig:ec}
+	\end{minipage}
+\end{multicols}
+\begin{flushleft} 
+	\textls[-50]{\mono{-
 	\linebreak\linebreak\linebreak
 	}}
 	\textbf{\Large\pbold{\textls[0]{EISENSTEIN'S ENGINEERING}}}\linebreak\linebreak

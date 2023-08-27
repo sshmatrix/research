@@ -45,11 +45,11 @@
      objecttolerance="10"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="5.3323101"
-     inkscape:cx="107.14641"
-     inkscape:cy="220.25544"
+     inkscape:zoom="4.9410846"
+     inkscape:cx="166.41865"
+     inkscape:cy="140.62367"
      inkscape:document-units="px"
-     inkscape:current-layer="g1467"
+     inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1397"
      inkscape:window-height="891"
@@ -109,8 +109,8 @@
        id="path3168" />
     <path
        id="path3216"
-       d="M -77.791753,-180.96013 H 119.21914"
-       style="fill:none;fill-rule:evenodd;stroke:#c5c5c5;stroke-width:0.37795275;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:1.51181102,1.51181102;stroke-opacity:1;stroke-dashoffset:0"
+       d="M -77.791753,-180.96013 H 120.31925"
+       style="fill:none;fill-rule:evenodd;stroke:#c5c5c5;stroke-width:0.377953;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:1.51181, 1.51181;stroke-dashoffset:0;stroke-opacity:1"
        sodipodi:nodetypes="cc" />
     <g
        id="g889"
@@ -411,7 +411,7 @@
        style="stroke:#000000;stroke-opacity:1;fill:#000000;fill-opacity:1">
       <g
          id="g1344"
-         transform="matrix(0.86354272,0,0,0.86354272,7.8327507,-73.337957)"
+         transform="matrix(0.86354272,0,0,0.86354272,7.8327507,-75.133476)"
          style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1">
         <text
            xml:space="preserve"
