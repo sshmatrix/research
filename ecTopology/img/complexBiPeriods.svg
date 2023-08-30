@@ -14,9 +14,9 @@
    sodipodi:version="0.32"
    inkscape:version="1.0.2 (e86c8708, 2021-01-15)"
    version="1.0"
-   sodipodi:docname="complexPeriods.svg"
+   sodipodi:docname="complexBiPeriods.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
-   inkscape:export-filename="/Users/sshmatrix/Idee/sshmatrix/Buidl/research/ecTopology/img/complexPeriods.png"
+   inkscape:export-filename="/Users/sshmatrix/Idee/sshmatrix/Buidl/research/ecTopology/img/complexBiPeriods.png"
    inkscape:export-xdpi="1800"
    inkscape:export-ydpi="1800">
   <defs
@@ -46,9 +46,9 @@
      objecttolerance="10"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="3.1210368"
-     inkscape:cx="67.69923"
-     inkscape:cy="56.944146"
+     inkscape:zoom="4.6567664"
+     inkscape:cx="47.442321"
+     inkscape:cy="70.775129"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -80,13 +80,13 @@
      id="layer1"
      transform="translate(120.76965,204.08574)">
     <path
-       style="fill:none;stroke:#0078ff;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:1,1;stroke-dashoffset:0;stroke-opacity:0.395161"
+       style="fill:none;stroke:#0078ff;stroke-width:0.30000001;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:0.90000004,0.90000004;stroke-dashoffset:0;stroke-opacity:0.395161"
        d="m -76.64021,-96.26756 44.93952,-11.7672"
        id="path2776-4"
        sodipodi:nodetypes="cc" />
     <path
-       style="fill:none;stroke:#ff2b00;stroke-width:0.49889764;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:0.99779528,0.99779528;stroke-dashoffset:0;stroke-opacity:0.318548"
-       d="m -49.774693,-96.62655 43.73933,-11.467"
+       style="fill:none;stroke:#ff2b00;stroke-width:0.30000001;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:0.90000004,0.90000004;stroke-dashoffset:0;stroke-opacity:0.318548"
+       d="m -49.774693,-96.52674 43.73933,-11.467"
        id="path2776"
        sodipodi:nodetypes="cc" />
     <path
@@ -120,7 +120,7 @@
          style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.65324px;font-family:Palatino;-inkscape-font-specification:'Palatino Italic';fill:#808080;fill-opacity:1;stroke:#808080;stroke-width:0.1148;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">i</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.680315;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m -61.310729,-83.05974 43.398712,-11.784064"
+       d="m -61.310729,-82.95974 43.398712,-11.884064"
        id="path867-9"
        sodipodi:nodetypes="cc" />
     <path
@@ -134,8 +134,8 @@
        id="path1349-2"
        sodipodi:nodetypes="cccc" />
     <path
-       style="fill:#0078ff;fill-opacity:1;stroke:#0078ff;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m -76.140684,-95.967753 0.781453,2.662705 1.900605,-1.950504 z"
+       style="fill:#0078ff;fill-opacity:1;stroke:#0078ff;stroke-width:0.356828;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -76.181751,-95.90783 0.919848,2.761849 1.918738,-2.116594 z"
        id="path1460"
        sodipodi:nodetypes="cccc" />
     <circle
@@ -419,8 +419,8 @@
     <circle
        style="fill:#0078ff;fill-opacity:1;fill-rule:evenodd;stroke:#0078ff;stroke-width:0.255453;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers;stop-color:#000000"
        id="path998-5-5-3"
-       cx="-76.466316"
-       cy="-96.304337"
+       cx="-76.509651"
+       cy="-96.204742"
        r="0.87227339" />
     <circle
        style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.19159;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers;stop-color:#000000"
