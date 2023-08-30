@@ -46,9 +46,9 @@
      objecttolerance="10"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="8.9688834"
-     inkscape:cx="43.3091"
-     inkscape:cy="31.004953"
+     inkscape:zoom="2.9840604"
+     inkscape:cx="68.563652"
+     inkscape:cy="76.368238"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -79,6 +79,20 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(-1329.7714,16.306433)">
+    <path
+       style="fill:#e6e6e6;fill-opacity:0.0846774;fill-rule:evenodd;stroke:#959595;stroke-width:0.18897638;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.87903231;paint-order:stroke fill markers;stop-color:#000000"
+       id="path997-4-6-2"
+       transform="rotate(90)"
+       sodipodi:type="arc"
+       sodipodi:cx="45.40641"
+       sodipodi:cy="-1391.3602"
+       sodipodi:rx="19.10882"
+       sodipodi:ry="51.299347"
+       sodipodi:start="3.8759403"
+       sodipodi:end="2.41517"
+       sodipodi:arc-type="arc"
+       d="m 31.222544,-1425.7361 a 19.10882,51.299347 0 0 1 21.078855,-13.4676 19.10882,51.299347 0 0 1 12.213681,48.0467 19.10882,51.299347 0 0 1 -12.355131,47.7854 19.10882,51.299347 0 0 1 -21.038438,-13.9156"
+       sodipodi:open="true" />
     <image
        width="5.4820328"
        height="4.8310404"
@@ -171,7 +185,7 @@
        d="m 33.892855,-1368.2778 a 19.10882,51.299347 0 0 1 -24.6004143,24.06 19.10882,51.299347 0 0 1 -10.4542193,-64.442 19.10882,51.299347 0 0 1 23.3180276,-31.9649 19.10882,51.299347 0 0 1 13.314569,60.5209"
        sodipodi:open="true" />
     <path
-       style="fill:none;stroke:#62b0ff;stroke-width:0.377953;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;stroke:#ababab;stroke-width:0.377953;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="M 1390.8211,16.650259 V -9.917433"
        id="path855"
        sodipodi:nodetypes="cc" />
