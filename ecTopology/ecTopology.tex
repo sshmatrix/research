@@ -289,7 +289,7 @@
   \vspace{2mm}
   Legendre noted that integrating the elliptic integral of second kind is easier if one knows the integral evaluation of the first kind{\textsuperscript{\textcolor{blue}{2}}\blfootnote{\textls[-50]{\mono{\textsuperscript{2}{one can observe this by integrating (6) using the elementary 'by parts' formalism}}}}}, i.e. the same equation as above but with the numerator set to 1,
   \begin{center}
-    C($\bar{\text{x}}$) = 4\resizebox{7.25px}{5.3px}{\upalpha}\,{{\raisebox{-1mm}{\huge\mate{^^^^222b}}}\textsuperscript{\raisebox{2.5mm}{\small{$\bar{\text{x}}$}}}}{\hspace{-2.5mm}\textsubscript{\raisebox{-2.5mm}{\footnotesize{0}}}}\;\;$\displaystyle\frac{\text{1}}{\text{[(1 - x\textsuperscript{2})(\text{1 - e\textsuperscript{2}x\textsuperscript{2}})]\textsuperscript{\textsuperscript{\scriptsize{1/2}}}}}$\,{\resizebox{5px}{7px}{\updelta}}x.
+    F($\bar{\text{x}}$) = 4\resizebox{7.25px}{5.3px}{\upalpha}\,{{\raisebox{-1mm}{\huge\mate{^^^^222b}}}\textsuperscript{\raisebox{2.5mm}{\small{$\bar{\text{x}}$}}}}{\hspace{-2.5mm}\textsubscript{\raisebox{-2.5mm}{\footnotesize{0}}}}\;\;$\displaystyle\frac{\text{1}}{\text{[(1 - x\textsuperscript{2})(\text{1 - e\textsuperscript{2}x\textsuperscript{2}})]\textsuperscript{\textsuperscript{\scriptsize{1/2}}}}}$\,{\resizebox{5px}{7px}{\updelta}}x.
   \end{center}
   \begin{flushright}
     {\vspace{-8mm}\mono{(7)}}
@@ -297,7 +297,7 @@
   \vspace{2mm}
   In parameterised form, elliptic integral of the first kind reads,
   \begin{center}
-    C(e) = \,{{\raisebox{-1mm}{\huge\mate{^^^^222b}}}\textsuperscript{\raisebox{2.5mm}{\footnotesize{\resizebox{5.25px}{5.25px}{\uppi}/2}}}}{\hspace{-6.25mm}\textsubscript{\raisebox{-2.5mm}{\footnotesize{0}}}}\;\;$\displaystyle\frac{\text{1}}{\text{(1 - e\textsuperscript{2}sin\textsuperscript{2}{\uptheta})\textsuperscript{1/2}}}$\,{\resizebox{5px}{7px}{\updelta}}{\uptheta},
+    F(e,\,\raisebox{0.25mm}{\resizebox{7.5px}{5px}{\upvarphi}}) = \,{{\raisebox{-1mm}{\huge\mate{^^^^222b}}}\textsuperscript{\raisebox{2.5mm}{\footnotesize{{{\upvarphi}}}}}}{\hspace{-3mm}\textsubscript{\raisebox{-2.5mm}{\footnotesize{0}}}}\;\;$\displaystyle\frac{\text{1}}{\text{(1 - e\textsuperscript{2}sin\textsuperscript{2}{\uptheta})\textsuperscript{1/2}}}$\,{\resizebox{5px}{7px}{\updelta}}{\uptheta},
   \end{center}
   \begin{flushright}
     {\vspace{-8mm}\mono{(8)}}
@@ -306,7 +306,7 @@
   which is eerily innocent-looking and quite similar to (3) except that the integrand is inverted. This particular form of the elliptic integral of the first kind is where Jacobi made the first meaningful step toward parameterising generic elliptic curves. Using nothing more than elementary geometry and trigonometry, Jacobi found C($\bar{\text{x}}$) to be analogous to a sine-inverse-like function{\textsuperscript{\textcolor{blue}{2}}\blfootnote{\textls[-50]{\mono{\textsuperscript{2}{due to the said integral being literally sin\textsuperscript{-1}($\bar{\text{x}}$) for e = 0}}}}} (denoted \resizebox{12px}{5.5px}{\kalam\textls[0]{sn}}\textsuperscript{-1}${\text{x}}$, \resizebox{12px}{5.5px}{\kalam\textls[0]{cn}}\textsuperscript{-1}${\text{x}}$, \resizebox{12.35px}{8.5px}{\kalam\textls[0]{dn}}\textsuperscript{-1}${\text{x}}$ etc), and found out that it did in fact have properties similar to a sinusoid such as periodicity. In fact, C($\bar{\text{x}}$) is a bi-periodic function with complex periods! In simpler words, equation (7) is doubly periodic with both periods ($\hat{\upomega}$\textsubscript{1},\,$\hat{\upomega}$\textsubscript{2}\;{$\in$}\;{$\mathbb{C}$}) being complex numbers, such that
   \vspace{2mm}
   \begin{center}
-    C($\bar{\text{x}}$) = C($\bar{\text{x}}$ + n\textsubscript{1}\,\cdot\,$\hat{\upomega}$\textsubscript{1}) = C($\bar{\text{x}}$ + n\textsubscript{2}\,\cdot\,$\hat{\upomega}$\textsubscript{2}),
+    F($\bar{\text{x}}$) = F($\bar{\text{x}}$ + n\textsubscript{1}\,\cdot\,$\hat{\upomega}$\textsubscript{1}) = F($\bar{\text{x}}$ + n\textsubscript{2}\,\cdot\,$\hat{\upomega}$\textsubscript{2}),
   \end{center}
   \begin{flushright}
     {\vspace{-7mm}\mono{(9)}}
@@ -360,15 +360,15 @@
   \end{center}
   This definition relies on the assumption that (x\textsuperscript{2} + y\textsuperscript{2})\textsuperscript{1/2} = r is a constant equal to the radius of the circle on which the trigonometry is defined. Jacobi's trigonometric functions extend these definitions to a generic path r(\uptheta) other than a circle. This leads to a simple generation of sine and cosine to \resizebox{12px}{5.5px}{\kalam\textls[0]{sn}} and \resizebox{12px}{5.5px}{\kalam\textls[0]{cn}}, along with a third function \resizebox{12.35px}{8.5px}{\kalam\textls[0]{dn}} that captures the variation in r(\uptheta):
   \begin{center}
-    \resizebox{12px}{5.5px}{\kalam\textls[0]{sn}}\,\resizebox{6.5px}{5.5px}{\upmu} = $\displaystyle\frac{\text{x}}{{\text{r(\uptheta)}}}$, \resizebox{12px}{5.5px}{\kalam\textls[0]{cn}}\,\resizebox{6.5px}{5.5px}{\upmu} = $\displaystyle\frac{\text{y}}{{\text{r(\uptheta)}}}$, \resizebox{12.35px}{8.5px}{\kalam\textls[0]{dn}}\,\resizebox{6.5px}{5.5px}{\upmu} = $\displaystyle\frac{\text{1}}{{\text{r(\uptheta)}}}$.
+    \resizebox{12px}{5.5px}{\kalam\textls[0]{sn}}\,\resizebox{6px}{5.2px}{\upmu} = $\displaystyle\frac{\;\;\text{x'}}{{\text{\upalpha}}}$, \resizebox{12px}{5.5px}{\kalam\textls[0]{cn}}\,\resizebox{6px}{5.2px}{\upmu} = $\displaystyle\frac{\;\;\text{y'}}{{\text{\upgamma}}}$, \resizebox{12.35px}{8.5px}{\kalam\textls[0]{dn}}\,\resizebox{6px}{5.2px}{\upmu} = $\displaystyle\frac{\text{1}}{{\text{r(\uptheta)}}}$.
   \end{center}
   \begin{flushright}
     {\vspace{-8mm}\mono{(10)}}
   \end{flushright}
   \vspace{2mm}
-  There are two main differences to note: first is the appearance of a third trigonometric function \resizebox{12.35px}{8.5px}{\kalam\textls[0]{dn}} capturing the curvature of the path, and second is the change in argument from {\uptheta} to \resizebox{6.5px}{5.5px}{\upmu}. For the particular case of an elliptical path, \resizebox{6.5px}{5.5px}{\upmu} can be evaluated by considering equation (8) for a generic final angle other than {\resizebox{5.5px}{5.5px}{\uppi}/2} and through an equivalence to equation (5) such that
+  There are two main differences to note: first is the appearance of a third trigonometric function \resizebox{12.35px}{8.5px}{\kalam\textls[0]{dn}} capturing the curvature of the path, and second is the change in argument from {\uptheta} to \resizebox{6px}{5.2px}{\upmu}. For the particular case of an elliptical path, \resizebox{6px}{5.2px}{\upmu} can be evaluated by considering equation (8) along with the implied equivalence to equation (5) such that
   \begin{center}
-    \resizebox{6.5px}{5.5px}{\upmu}\;\;\equiv\;\;C(e,\,\raisebox{0.25mm}{\resizebox{7.5px}{5px}{\upvarphi}}) = \,{{\raisebox{-1mm}{\huge\mate{^^^^222b}}}\textsuperscript{\raisebox{2.5mm}{\footnotesize{\hspace{-0.10mm}{\upvarphi}}}}}{\hspace{-3mm}\textsubscript{\raisebox{-2.5mm}{\hspace{-0.15mm}\footnotesize{0}}}}\;r(\uptheta,\,e)\,{\resizebox{5px}{7px}{\updelta}}{\uptheta}, where
+    \resizebox{6px}{5.2px}{\upmu}\;\;\equiv\;\;F(e,\,\raisebox{0.25mm}{\resizebox{7.5px}{5px}{\upvarphi}}) = \,{{\raisebox{-1mm}{\huge\mate{^^^^222b}}}\textsuperscript{\raisebox{2.5mm}{\footnotesize{\hspace{-0.10mm}{\upvarphi}}}}}{\hspace{-3mm}\textsubscript{\raisebox{-2.5mm}{\hspace{-0.15mm}\footnotesize{0}}}}\;r(\uptheta,\,e)\,{\resizebox{5px}{7px}{\updelta}}{\uptheta}, where
   \end{center}
   \begin{center}
     r\;\;\equiv\;\;r(\uptheta,\,e) = $\displaystyle\frac{\text{1}}{\text{(1 - e\textsuperscript{2}sin\textsuperscript{2}{\uptheta})\textsuperscript{1/2}}}$
@@ -377,7 +377,7 @@
     {\vspace{-8mm}\mono{(11)}}
   \end{flushright}
   \vspace{2mm}
-  Jacobi noted that the trajectory (aka topology) of an ellipse is completely described by two concentric circles that inscribe (radius \raisebox{0.25mm}{\resizebox{6.5px}{5px}{\upgamma}} = 1) and circumscribe (radius {\resizebox{7.25px}{5.3px}{\upalpha}}) the ellipse.    HERE description of \resizebox{12px}{5.5px}{\kalam\textls[0]{sn}}\textsuperscript{-1}${\text{x}}$ function as shown in figures \ref{fig:jacobi} and \ref{fig:dual}. In essense, Jacobi's functions are quite simply generation of trigonometry to \linebreak\linebreak
+  Note that \resizebox{6px}{5.2px}{\upmu} is the (re)definition of the argument of Jacobi's trigonometric functions and \resizebox{6px}{5.2px}{\upmu} = {\uptheta} for a circle. Similarly, \resizebox{12px}{5.5px}{\kalam\textls[0]{sn}} = sine, \resizebox{12px}{5.5px}{\kalam\textls[0]{cn}} = cosine and \resizebox{12.35px}{8.5px}{\kalam\textls[0]{dn}} = 1/r for a circle. Jacobi noted that the trajectory (aka topology) of an ellipse is completely described by two concentric circles that inscribe (radius \raisebox{0.25mm}{\resizebox{6.5px}{5px}{\upgamma}} = 1) and circumscribe (radius {\resizebox{7.25px}{5.3px}{\upalpha}}) the ellipse, and Jacobi's trigonomatric functions capture the projection of the ellipse (encased by the two circles) onto these two circles; these two circles is some sense form the basis of the elliptical topology. This geometric interpretation of Jacobi's functions is shown in figures \ref{fig:jacobi} and \ref{fig:dual}. \linebreak\linebreak
   }}
 \end{flushleft}
 \begin{multicols}{2}
@@ -385,7 +385,7 @@
   \begin{minipage}{\linewidth}
     \centering
     \includegraphics[width=77.5mm]{./img/jacobiSine.png}\vspace{1mm}
-    \captionof{figure}{\textls[-50]{\mono{Jacobi's 16 trigonometric functions}}}
+    \captionof{figure}{\textls[-50]{\mono{Jacobi's elliptic trigonometric functions}}}
     \label{fig:jacobi}
   \end{minipage}
   \noindent
