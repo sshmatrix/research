@@ -224,13 +224,13 @@
   In conjunction with the well-known trigonometric parameterisation of ellipse with (x, y) {\rightarrow} (\resizebox{7.25px}{5.3px}{\upalpha}\,sin{\,\uptheta}, \raisebox{0.25mm}{\resizebox{6.5px}{5px}{\upgamma}\,}cos{\,\uptheta}), the general elliptic intergal reduces to,
   \vspace{1.85mm}
   \begin{center}
-    C(e) = 4\;{{\raisebox{-1mm}{\huge\mate{^^^^222b}}}\textsuperscript{\raisebox{2.75mm}{\scriptsize{\resizebox{5.25px}{5.25px}{\uppi}/2}}}}{\hspace{-5.25mm}\textsubscript{\raisebox{-2.5mm}{\footnotesize{0}}}}\;\;(1 - e\textsuperscript{2}sin\textsuperscript{2}{\uptheta})\textsuperscript{1/2}\,{\resizebox{5px}{7px}{\updelta}}{\uptheta}.
+    C(e) = 4\;{{\raisebox{-1mm}{\huge\mate{^^^^222b}}}\textsuperscript{\raisebox{2.75mm}{\scriptsize{{\uppi}/2}}}}{\hspace{-5.25mm}\textsubscript{\raisebox{-2.5mm}{\footnotesize{0}}}}\;\;(1 - e\textsuperscript{2}sin\textsuperscript{2}{\uptheta})\textsuperscript{1/2}\,{\resizebox{5px}{7px}{\updelta}}{\uptheta}.
   \end{center}
   \begin{flushright}
     {\vspace{-8mm}\mono{(3)}}
   \end{flushright}
   \vspace{1.85mm}
-  In strict sense, the inverse of the integrand in the elliptic integral (2)-(3) is already the elliptic curve, but it is not straightforward to interpret in this form. In order to arrive at a more intuitive and interpretive form of elliptic curve, we perform a parameterisation of the form {\uptheta}\textsuperscript{n} = 1 - e\textsuperscript{2}x\textsuperscript{2}. Let's consider in particular the parametrisation for n = 1, such that {\uptheta} = 1 - e\textsuperscript{2}x\textsuperscript{2}. This leads to
+  In strict sense, the inverse of the integrand in the elliptic integral (2)-(3) is already the elliptic curve, but it is not straightforward to interpret in this form. In order to arrive at a more intuitive and interpretive form of elliptic curve, we perform an abstract parameterisation of the form {\uptheta}\textsuperscript{n} = 1 - e\textsuperscript{2}x\textsuperscript{2}. Let's consider in particular the parameterisation for n = 1, such that {\uptheta} = 1 - e\textsuperscript{2}x\textsuperscript{2}. This leads to
   \vspace{1mm}
   \begin{center}
     C(k) = $\displaystyle\frac{\text{1}}{\text{2}}$\;{{\raisebox{-1mm}{\huge\mate{^^^^222b}}}\textsuperscript{\raisebox{2.5mm}{\footnotesize{1}}}}{\hspace{-2.5mm}\textsubscript{\raisebox{-2.5mm}{\small{k}\textsuperscript{\scriptsize{2}}}}}$\displaystyle\frac{\text{{\uptheta}}}{\text{[\uptheta({\uptheta} - k\textsuperscript{2})({\uptheta} - 1)]}\textsuperscript{\textsuperscript{\scriptsize{1/2}}}}$\,{\resizebox{5px}{7px}{\updelta}}{\uptheta} = $\displaystyle{-}\frac{\text{\mbold{i}}}{\text{2}}$\;{{\raisebox{-1mm}{\huge\mate{^^^^222b}}}\textsuperscript{\raisebox{2.5mm}{\footnotesize{1}}}}{\hspace{-2.5mm}\textsubscript{\raisebox{-2.5mm}{\small{k}\textsuperscript{\scriptsize{2}}}}}$\displaystyle\frac{\text{{\uptheta}}}{\text{\,E(\uptheta)}}$\,{\resizebox{5px}{7px}{\updelta}}{\uptheta},
@@ -266,20 +266,22 @@
     {E\textsuperscript{2}(\uptheta)} = {\uptheta}\textsuperscript{3} + r\cdot\,{\uptheta}\textsuperscript{2} + p\,\cdot\,{\uptheta} + q,
   \end{center}
   \vspace{2mm}
-  which is precisely the more familiar and recognisable form of the {\mbold{elliptic curve}}! Note that the form of {E({\uptheta})} in the above example asserts three roots of {E(\uptheta)}, i.e. 0, k\textsuperscript{2}, 1. This is however not true for generic elliptic curves which may have only one real root depending on the values of p, q and r, all of which are functions of k in return. In our particular example, r = -(1 + k\textsuperscript{2}), p = k\textsuperscript{2} and q = 0. Some readers may feel cheated at this point since we have just said that an elliptic curve is simply the square root of a cubic polynomial! This is indeed correct but not every cubic polynomial is an elliptic curve; the coefficients of the cubic polynomial must be such that there are no repeated roots, i.e. they represent a legitimate ellipse with legal values of e\textsuperscript{2} and k\textsuperscript{2}. Lastly, we note that the if the elliptic curve has 3 real roots, then evaluation of (4) requires integrating {E(\uptheta)} in the range (k\textsuperscript{2}, 1) where it is purely complex! In other words, figure \ref{fig:ec} doesn't paint the entire picture of elliptic curves with three real roots instead of one. To fully grasp the topological intuition behind {E(\uptheta)}, we must include the complex plane in our graphics. We also make a note of the parameterisation {\uptheta} = 1 - e\textsuperscript{2}x\textsuperscript{2} that led to the easier form of the elliptic curve in (4); what led to this choice?{\textsuperscript{\textcolor{blue}{Q1}}}
+  which is precisely the more familiar and recognisable form of the {\mbold{elliptic curve}}. Note that the form of {E({\uptheta})} in the above example asserts three roots of {E(\uptheta)}, i.e. 0, k\textsuperscript{2}, 1. This is however not true for generic elliptic curves which may have only one real root depending on the values of p, q and r, all of which are functions of k in return. In our particular example, r = -(1 + k\textsuperscript{2}), p = k\textsuperscript{2} and q = 0. Some readers may feel cheated at this point since we have just said that an elliptic curve is simply the square root of a cubic polynomial. This is indeed correct but not every cubic polynomial is an elliptic curve; the coefficients of the cubic polynomial must be such that there are no repeated roots, i.e. they represent a legitimate ellipse with legal values of e\textsuperscript{2} and k\textsuperscript{2}. Lastly, we note that the if the elliptic curve has 3 real roots, then evaluation of (4) requires integrating {E(\uptheta)} in the range (k\textsuperscript{2}, 1) where it is purely complex. In other words, figure \ref{fig:ec} doesn't paint the entire picture of elliptic curves with three real roots instead of one. To fully grasp the topological intuition behind {E(\uptheta)}, we must include the complex plane in our graphics. We also make a note of the abstract parameterisation {\uptheta} = 1 - e\textsuperscript{2}x\textsuperscript{2} that led to the easier form of the elliptic curve in (4); what led to this non-geometric choice?{\textsuperscript{\textcolor{blue}{Q1}}}
   \linebreak\linebreak\linebreak
   \textbf{\Large\pbold\textls[-25]{PERIODICITY}}\linebreak\linebreak
   It was Abel and Jacobi who first understood that the inverse of the intergal in (2a) is periodic and more relevant than the intergal itself, i.e.
   \vspace{2mm}
   \begin{center}
-    F($\bar{\text{x}}$) = {{\raisebox{-1mm}{\huge\mate{^^^^222b}}}\textsuperscript{\raisebox{2.5mm}{\small{$\bar{\text{x}}$}}}}{\hspace{-2.5mm}\textsubscript{\raisebox{-2.5mm}{\footnotesize{0}}}}\;$\displaystyle\frac{\text{1}}{\text{(1 - x\textsuperscript{2})\textsuperscript{1/2}}}$\,{\resizebox{5px}{7px}{\updelta}}x = sin\textsuperscript{-1}($\bar{\text{x}}$) = {\uptheta}.
+    F($\bar{\text{x}}$) = {{\raisebox{-1mm}{\huge\mate{^^^^222b}}}\textsuperscript{\raisebox{2.5mm}{\small{$\bar{\text{x}}$}}}}{\hspace{-2.5mm}\textsubscript{\raisebox{-2.5mm}{\footnotesize{0}}}}\;$\displaystyle\frac{\text{1}}{\text{(1 - x\textsuperscript{2})\textsuperscript{1/2}}}$\,{\resizebox{5px}{7px}{\updelta}}x = sin\textsuperscript{-1}($\bar{\text{x}}$), or
+  \end{center}
+  \begin{center}
+    F({\upvarphi}) = {{\raisebox{-1mm}{\huge\mate{^^^^222b}}}\textsuperscript{\raisebox{2.5mm}{\upvarphi}}}{\hspace{-3mm}\textsubscript{\raisebox{-2.5mm}{\footnotesize{0}}}}\;{\resizebox{5px}{7px}{\updelta}}{\uptheta} = {\upvarphi},
   \end{center}
   \begin{flushright}
     {\vspace{-8mm}\mono{(5)}}
   \end{flushright}
   \vspace{2mm}
-  Abel and Jacobi crucially formalised the properties of inverses of trigonometric functions using definite integrals and differential \& intergal calculus developed by Newton more than 150 years prior. The assertion of periodicity in Abel's works triggered several prominent number theorists to take note of elliptic integrals and their remarkable properties. For instance, the above integral becomes solvable only once we insert the parameterisation (x, y) = [{\large\pala\it{f}}\hspace{0.4mm}(\uptheta), {\large\pala\it{f}}\hspace{0.2mm}'\hspace{-1mm}(\uptheta)] {\rightarrow} (sin{\,\uptheta}, cos{\,\uptheta})! Based on this observation, Abel and Jacobi asserted that the key to decoding elliptic intergals is to find a similar parameterisation ({\large\pala\it{f}}\hspace{0.4mm}, {\large\pala\it{f}}\hspace{0.2mm}') which reduces the elliptic intergal to an integrable form. Thus, the search had begun for such parameterisations, primarily by Jacobi and Abel.\linebreak\linebreak
-  Legendre in the past had re-arranged equation (2) in another form which turned out to be more useful for Jacobi. Legendre's form of (2) simply reads
+	when expressed using trigonometric parameterisation (x, y) {\rightarrow} (sin{\,\uptheta}, cos{\,\uptheta}). There are two interesting things to note here: a) F($\bar{\text{x}}$) is precisely equal to the argument {\upvarphi} of a sinusoid, and b) the argument {\upvarphi} of the sinusoid is precisely equal to the final geometric angle (in the limits of the integral) in parameterised coordinates. These precise observations and their generalisations in Jacobi's and Abel's works triggered several prominent number theorists to take note of elliptic integrals and their remarkable properties. For instance, the above integral becomes readily calculable only once we insert the parameterisation (x, y) = [{\large\pala\it{f}}\hspace{0.4mm}(\uptheta), {\large\pala\it{f}}\hspace{0.2mm}'\hspace{-1mm}(\uptheta)] {\rightarrow} (sin{\,\uptheta}, cos{\,\uptheta}). Based on this observation, Abel and Jacobi asserted that the key to decoding elliptic intergals is to find a similar parameterisation ({\large\pala\it{f}}\hspace{0.4mm}, {\large\pala\it{f}}\hspace{0.2mm}') which reduces the elliptic intergal to an integrable form. Thus the search had begun for such parameterisations, primarily by Jacobi and Abel at the beginning and later by Weistrausse. Legendre in the past had re-arranged equation (2) in another form which turned out to be more useful for Jacobi. Legendre's form of (2) simply reads
   \begin{center}
     C(e) = {4\resizebox{7.25px}{5.3px}{\upalpha}}\,{{\raisebox{-1mm}{\huge\mate{^^^^222b}}}\textsuperscript{\raisebox{2.5mm}{\footnotesize{1}}}}{\hspace{-2.5mm}\textsubscript{\raisebox{-2.5mm}{\footnotesize{0}}}}\;$\displaystyle\frac{\text{1 - e\textsuperscript{2}x\textsuperscript{2}}}{\text{[(1 - x\textsuperscript{2})(\text{1 - e\textsuperscript{2}x\textsuperscript{2}})]\textsuperscript{\textsuperscript{\scriptsize{1/2}}}}}$\,{\resizebox{5px}{7px}{\updelta}}x,
   \end{center}
@@ -303,19 +305,70 @@
     {\vspace{-8mm}\mono{(8)}}
   \end{flushright}
   \vspace{2mm}
-  which is eerily innocent-looking and quite similar to (3) except that the integrand is inverted. This particular form of the elliptic integral of the first kind is where Jacobi made the first meaningful step toward parameterising generic elliptic curves. Using nothing more than elementary geometry and trigonometry, Jacobi found C($\bar{\text{x}}$) to be analogous to a sine-inverse-like function{\textsuperscript{\textcolor{blue}{2}}\blfootnote{\textls[-50]{\mono{\textsuperscript{2}{due to the said integral being literally sin\textsuperscript{-1}($\bar{\text{x}}$) for e = 0}}}}} (denoted \resizebox{12px}{5.5px}{\kalam\textls[0]{sn}}\textsuperscript{-1}${\text{x}}$, \resizebox{12px}{5.5px}{\kalam\textls[0]{cn}}\textsuperscript{-1}${\text{x}}$, \resizebox{12.35px}{8.5px}{\kalam\textls[0]{dn}}\textsuperscript{-1}${\text{x}}$ etc), and found out that it did in fact have properties similar to a sinusoid such as periodicity. In fact, C($\bar{\text{x}}$) is a bi-periodic function with complex periods! In simpler words, equation (7) is doubly periodic with both periods ($\hat{\upomega}$\textsubscript{1},\,$\hat{\upomega}$\textsubscript{2}\;{$\in$}\;{$\mathbb{C}$}) being complex numbers, such that
+  which is eerily innocent-looking and quite similar to (3) except that the integrand is inverted. This particular form of the elliptic integral of the first kind is where Jacobi made the first meaningful step toward parameterising generic elliptic curves. Using nothing more than elementary geometry and trigonometry, Jacobi found F(e,\,\raisebox{0.25mm}{\resizebox{7.5px}{5px}{\upvarphi}}) to be analogous to the argument \resizebox{7.5px}{5px}{\upvarphi} of a sine-like (and cosine-like) function{\textsuperscript{\textcolor{blue}{2}}\blfootnote{\textls[-50]{\mono{\textsuperscript{2}{due to the said integral being literally equal to sin\textsuperscript{-1}(${\text{x}}$) for e = 0}}}}}, denoted by \resizebox{12px}{5.5px}{\kalam\textls[0]{sn}}\,${\text{F}}$, \resizebox{12px}{5.5px}{\kalam\textls[0]{cn}}\,${\text{F}}$, \resizebox{12.35px}{8.5px}{\kalam\textls[0]{dn}}\,${\text{F}}$ etc. Jacobi further evaluated that these bespoke sine- or cosine-like functions in fact have properties similar to a sinusoid such as periodicity. In fact, \resizebox{12px}{5.5px}{\kalam\textls[0]{sn}}\,${\text{F}}$, \resizebox{12px}{5.5px}{\kalam\textls[0]{cn}}\,${\text{F}}$, \resizebox{12.35px}{8.5px}{\kalam\textls[0]{dn}}\,${\text{F}}$ are all bi-periodic functions with complex periods in their argument F. In simpler words, \resizebox{12px}{5.5px}{\kalam\textls[0]{sn}} is doubly periodic with both periods ($\hat{\upomega}$\textsubscript{1},\,$\hat{\upomega}$\textsubscript{2}\;{$\in$}\;{$\mathbb{C}$}) being complex numbers, such that
   \vspace{2mm}
   \begin{center}
-    F($\bar{\text{x}}$) = F($\bar{\text{x}}$ + n\textsubscript{1}\,\cdot\,$\hat{\upomega}$\textsubscript{1}) = F($\bar{\text{x}}$ + n\textsubscript{2}\,\cdot\,$\hat{\upomega}$\textsubscript{2}),
+    \resizebox{12px}{5.5px}{\kalam\textls[0]{sn}}(F) = \resizebox{12px}{5.5px}{\kalam\textls[0]{sn}}(F + n\textsubscript{1}\,\cdot\,$\hat{\upomega}$\textsubscript{1}) = \resizebox{12px}{5.5px}{\kalam\textls[0]{sn}}(F + n\textsubscript{2}\,\cdot\,$\hat{\upomega}$\textsubscript{2}), and so on,
   \end{center}
   \begin{flushright}
     {\vspace{-7mm}\mono{(9)}}
   \end{flushright}
   \vspace{2mm}
-  where $\hat{\upomega}$\textsubscript{1} and $\hat{\upomega}$\textsubscript{2} must necessarily be linearly-independent in {$\mathbb{R}$}, aka they are not mutually related by $\hat{\upomega}$\textsubscript{1}\,{\robot{^^^^2260}}\;{$\mathbb{R}$}\,\cdot\,$\hat{\upomega}$\textsubscript{2}. This however wasn't the most important assertion; Jacobi further found that no single-variable function could possibly have more than two independent complex periods, and all except elliptic integrals of the first and second (and third) kind have at most one independent period only! This was arguably the first solid proof that elliptic integrals were a special class of functions.\linebreak\linebreak\linebreak
+  where $\hat{\upomega}$\textsubscript{1} and $\hat{\upomega}$\textsubscript{2} must necessarily be linearly-independent in {$\mathbb{R}$}, aka they are not mutually related by $\hat{\upomega}$\textsubscript{1}\,{\robot{^^^^2260}}\;{$\mathbb{R}$}\,\cdot\,$\hat{\upomega}$\textsubscript{2}. This however wasn't the most important assertion; Jacobi further found that no single-variable function could possibly have more than two independent complex periods, and all except elliptic integrals of the first and second (and third) kind have at most one independent period only. This was arguably the first solid proof that elliptic integrals were a special class of functions.\linebreak\linebreak
+	These new set of functions \resizebox{12px}{5.5px}{\kalam\textls[0]{sn}}\,${\text{F}}$, \resizebox{12px}{5.5px}{\kalam\textls[0]{cn}}\,${\text{F}}$, \resizebox{12.35px}{8.5px}{\kalam\textls[0]{dn}}\,${\text{F}}$ soon came to be known as Jacobi's elliptic functions (read: Jacobi's generalised and redefined trigonometric functions). Jacobi's elliptic functions are generalisations of generic sine and cosine functions (which are traditionally defined on a circle) on an elliptic path. To understand this, consider that for any point (x, y) on a carterian surface, we may readily define the basic trigonometric functions as per our education to be 
+  \begin{center}
+    sin\,{\uptheta} = $\displaystyle\frac{\text{x}}{{\text{r}}}$ and cos\,{\uptheta} = $\displaystyle\frac{\text{y}}{{\text{r}}}$.
+  \end{center}
+  This definition relies on the assumption that (x\textsuperscript{2} + y\textsuperscript{2})\textsuperscript{1/2} = r is a constant equal to the radius of the circle on which the trigonometry is defined. Jacobi's elliptic functions extend these definitions to a generic path r(\uptheta) other than a circle. In addition, Jacobi's elliptic functions are not dependent on the geometrical angle {\resizebox{7.5px}{5px}{\upvarphi}} explicitly, but instead are a function of a redefined and abstract (= non-geometric) argument \resizebox{6px}{5.2px}{\upmu}, which is equal to {\resizebox{7.5px}{5px}{\upvarphi}} for a circle. For the particular case of an elliptic path, \resizebox{6px}{5.2px}{\upmu} can be evaluated by considering equation (8) along with the implied equivalence to equation (5) such that
+  \begin{center}
+    \resizebox{6px}{5.2px}{\upmu}\;\;\equiv\;\;F(e,\,\raisebox{0.25mm}{\resizebox{7.5px}{5px}{\upvarphi}}) = \,{{\raisebox{-1mm}{\huge\mate{^^^^222b}}}\textsuperscript{\raisebox{2.5mm}{\footnotesize{\hspace{-0.10mm}{\upvarphi}}}}}{\hspace{-3mm}\textsubscript{\raisebox{-2.5mm}{\hspace{-0.15mm}\footnotesize{0}}}}\;r(\uptheta,\,e)\,{\resizebox{5px}{7px}{\updelta}}{\uptheta} {\victr{^^^^2260}} \raisebox{0.25mm}{\resizebox{7.5px}{5px}{\upvarphi}}, where
+  \end{center}
+  \begin{center}
+    r\;\;\equiv\;\;r(\uptheta,\,e) = $\displaystyle\frac{\text{1}}{\text{(1 - e\textsuperscript{2}sin\textsuperscript{2}{\uptheta})\textsuperscript{1/2}}}$
+  \end{center}
+  \begin{flushright}
+    {\vspace{-8mm}\mono{(11)}}
+  \end{flushright}
+  \vspace{2mm}
+  Like previously stated, \resizebox{6px}{5.2px}{\upmu} is an abstract redefinition of the argument (geometric angle) of regular trigonometric functions, to allow them to work with Jacobi's elliptic functions, such that \resizebox{6px}{5.2px}{\upmu} = {\resizebox{7.5px}{5px}{\upvarphi}} is a special case of a circle. Consequently, Jacobi's functions are simple redefinitions of sin\,{\resizebox{7.5px}{5px}{\upvarphi}} and cos\,{\resizebox{7.5px}{5px}{\upvarphi}} to \resizebox{12px}{5.5px}{\kalam\textls[0]{sn}}\,\resizebox{6px}{5.2px}{\upmu} and \resizebox{12px}{5.5px}{\kalam\textls[0]{cn}}\,\resizebox{6px}{5.2px}{\upmu}, along with a third function \resizebox{12.35px}{8.5px}{\kalam\textls[0]{dn}}\,\resizebox{6px}{5.2px}{\upmu} that captures the variation in r(\uptheta). These redefined trigonometric functions are more general in nature and a circle is a special case of this general topology; in case of a circle, this topology reduces \resizebox{12px}{5.5px}{\kalam\textls[0]{sn}}, \resizebox{12px}{5.5px}{\kalam\textls[0]{cn}} and \resizebox{12.35px}{8.5px}{\kalam\textls[0]{dn}} to sine, cosine and 1 respecitvely.
+  \begin{center}
+    \resizebox{12px}{5.5px}{\kalam\textls[0]{sn}}\,\resizebox{6px}{5.2px}{\upmu} = $\displaystyle\frac{\;\;\text{x\textsubscript{i}}}{{\text{\upgamma}}}$ = $\displaystyle\frac{\;\;\text{x}}{{\text{r(\uptheta,\,e)}}}$,
+  \end{center}
+  \begin{center}
+    \resizebox{12px}{5.5px}{\kalam\textls[0]{cn}}\,\resizebox{6px}{5.2px}{\upmu} = $\displaystyle\frac{\;\;\text{y\textsubscript{i}}}{{\text{\upgamma}}}$
+  \end{center}
+  \begin{center}
+    \resizebox{12.35px}{8.5px}{\kalam\textls[0]{dn}}\,\resizebox{6px}{5.2px}{\upmu} = $\displaystyle\frac{\text{\upgamma}}{{\text{r(\uptheta,\,e)}}}$
+  \end{center}
+  \begin{flushright}
+    {\vspace{-8mm}\mono{(10)}}
+  \end{flushright}
+  \vspace{2mm}
+  There are two explicit differences to note when comparing Jacobi's elliptic functions to the traditional trigonometric functions: a) first is the appearance of a third elliptic function \resizebox{12.35px}{8.5px}{\kalam\textls[0]{dn}} capturing the curvature of the path, and b) second is the change in argument from geometric {\resizebox{7.5px}{5px}{\upvarphi}} to non-geometric \resizebox{6px}{5.2px}{\upmu}.\linebreak\linebreak  
+  Jacobi noted that the trajectory (aka topology) of an ellipse is completely described by two concentric circles that inscribe (radius \raisebox{0.25mm}{\resizebox{6.5px}{5px}{\upgamma}} = 1) and circumscribe (radius {\resizebox{7.25px}{5.3px}{\upalpha}}) the ellipse, and Jacobi's trigonomatric functions capture the projection of the ellipse (encased by the two circles) onto these two circles; these two circles is some sense form the basis of the elliptic topology. This geometric interpretation of Jacobi's functions is shown in figures \ref{fig:jacobi} and \ref{fig:dual}.\linebreak\linebreak
+  }}
+\end{flushleft}
+\begin{multicols}{2}
+  \noindent
+  \begin{minipage}{\linewidth}
+    \centering
+    \includegraphics[width=77.5mm]{./img/jacobiSine.png}\vspace{1mm}
+    \captionof{figure}{\textls[-50]{\mono{Jacobi's elliptic trigonometric functions}}}
+    \label{fig:jacobi}
+  \end{minipage}
+  \noindent
+  \begin{minipage}{\linewidth}
+    \centering
+    \includegraphics[width=77.5mm]{./img/dualTopology.png}\vspace{1mm}
+    \captionof{figure}{\textls[-50]{\mono{Split topology for ellipses underlying Jacobi's trigonometry}}}
+    \label{fig:dual}
+  \end{minipage}
+\end{multicols}
+\vspace{2mm}
+\begin{flushleft}
   \textbf{\Large\pbold\textls[-25]{COMPLEX BI-PERIODICITY}}\linebreak\linebreak
-  We are now at a point where we cannot avoid complex numbers any further. We faced them while trying to evaluate the elliptic integral when {E($\uptheta$)} had three real roots, and now we are facing them yet again when trying to retrace Jacobi's steps. In order to understand the topology of Jacobi's trigonometric functions, we must first introduce complex numbers and particularly n-dimensional lattices in complex space, both of which are necessary to understand bi-periodic functions with complex periods.\linebreak\linebreak
-  Periodicity in real space $\mathbb{R}$ is simple to understand topologically. Complex numbers on the other hand behave as vectors in geometrical sense, and therefore periodicity in a vector space must be understood. For example, consider equation (8) defining periodicity in complex space with periods $\hat{\upomega}$\textsubscript{1} and $\hat{\upomega}$\textsubscript{2}. Consider any one of the periods $\hat{\upomega}$\textsubscript{1} to begin with and calculate a few iterations of of $\bar{\text{x}}$ + n\textsubscript{1}\,\cdot\,$\hat{\upomega}$\textsubscript{1} for a few values of n\textsubscript{1} = 1, 2,\;...\;6. We find that the corresponding vectors all lie on a straight line in the complex plane parallel to $\hat{\upomega}$\textsubscript{1}; these points are shown in figure 3 with their indices. In the same way, the vectors associated with the second period also generate a straight line with a different slope parallel to $\hat{\upomega}$\textsubscript{2}. The two sets of points lying on lines of unequal slope in the complex plane form a lattice, denoted by $\hat{\upomega}$\textsubscript{1}\,{\times}\;$\hat{\upomega}$\textsubscript{2}, such that the bi-periodic function is also periodic on the lattice. The trivial extension of this is that when both periods are linearly-dependent, the lattice is in fact just a straight line. Recall that for a mono-periodic real functions such as sin(x), its parameterised form is a closed curve (a circle). In other words, a mono-periodic function parameterises to a closed curve in 2-dimensional space. In the same way, a bi-periodic function parameterises to a closed surface in 3-dimensional space. Does this mean that a bi-periodic C($\bar{\text{x}}$) is a closed surface in complex hyperplane{\textsuperscript{\textcolor{blue}{2}}\blfootnote{\textls[-50]{\mono{\textsuperscript{2}{Hyperplane refers to the (N + 1)-dimensional space that parameterises the periodic N-dimensional function}}}}}? Yes. How does this surface look? Figure 4 shows a visualisation of the parameterisation similar to how a circle can be obtained by parameterising a sinusoid by \resizebox{5.5px}{7px}{\uptheta}. The form of a bi-periodic C($\bar{\text{x}}$) is a complex torus, the only closed surface capable of bi-periodicity in three dimensions. It can be intuitively derived by rolling the lattice sheet into a cylinder along $\hat{\upomega}$\textsubscript{1}, and then joining the opposite ends of the rolled cylinder (by 'rolling' the cylinder second time along $\hat{\upomega}$\textsubscript{2}) to form a torus.
+  \textls[-50]{\mono{We are now at a point where we cannot avoid complex numbers any further. We faced them while trying to evaluate the elliptic integral when {E($\uptheta$)} had three real roots, and now we are facing them yet again when trying to retrace Jacobi's steps. In order to understand the topology of Jacobi's trigonometric functions, we must first introduce complex numbers and particularly n-dimensional lattices in complex space, both of which are necessary to understand bi-periodic functions with complex periods.\linebreak\linebreak
+  Periodicity in real space $\mathbb{R}$ is simple to understand topologically. Complex numbers on the other hand behave as vectors in geometrical sense, and therefore periodicity in a vector space must be understood. For example, consider equation (9) defining periodicity in complex space with periods $\hat{\upomega}$\textsubscript{1} and $\hat{\upomega}$\textsubscript{2}. Consider any one of the periods $\hat{\upomega}$\textsubscript{1} to begin with and calculate a few iterations of of $\bar{\text{x}}$ + n\textsubscript{1}\,\cdot\,$\hat{\upomega}$\textsubscript{1} for a few values of n\textsubscript{1} = 1, 2,\;...\;6. We find that the corresponding vectors all lie on a straight line in the complex plane parallel to $\hat{\upomega}$\textsubscript{1}; these points are shown in figure 3 with their indices. In the same way, the vectors associated with the second period also generate a straight line with a different slope parallel to $\hat{\upomega}$\textsubscript{2}. The two sets of points lying on lines of unequal slope in the complex plane form a lattice, denoted by $\hat{\upomega}$\textsubscript{1}\,{\times}\;$\hat{\upomega}$\textsubscript{2}, such that the bi-periodic function is also periodic on the lattice. The trivial extension of this is that when both periods are linearly-dependent, the lattice is in fact just a straight line. Recall that for a mono-periodic real functions such as sin(x), its parameterised form is a closed curve (a circle). In other words, a mono-periodic function parameterises to a closed curve in 2-dimensional space. In the same way, a bi-periodic function parameterises to a closed surface in 3-dimensional space. Does this mean that a bi-periodic C($\bar{\text{x}}$) is a closed surface in complex hyperplane{\textsuperscript{\textcolor{blue}{2}}\blfootnote{\textls[-50]{\mono{\textsuperscript{2}{Hyperplane refers to the (N + 1)-dimensional space that parameterises the periodic N-dimensional function}}}}}? Yes. How does this surface look? Figure 4 shows a visualisation of the parameterisation similar to how a circle can be obtained by parameterising a sinusoid by \resizebox{5.5px}{7px}{\uptheta}. The form of a bi-periodic C($\bar{\text{x}}$) is a complex torus, the only closed surface capable of bi-periodicity in three dimensions. It can be intuitively derived by rolling the lattice sheet into a cylinder along $\hat{\upomega}$\textsubscript{1}, and then joining the opposite ends of the rolled cylinder (by 'rolling' the cylinder second time along $\hat{\upomega}$\textsubscript{2}) to form a torus.
   }}
 \end{flushleft}
 \vspace{2mm}
@@ -351,49 +404,6 @@
     \includegraphics[width=59.1mm]{./img/complexCylinder.png}\vspace{1mm}
     \captionof{figure}{\textls[-50]{\mono{Cylindrical parameterisation of a complex lattice generated by a mono-periodic function}}}
     \label{fig:ec}
-  \end{minipage}
-\end{multicols}
-\begin{flushleft}
-  \textls[-50]{\mono{We may now revisit Jacobi's trigonometric functions and understand how their topology allows for strict bi-periodicity. Like previously mentioned, Jacobi's functions are generalisations of generic sine and cosine functions which are traditionally defined on a circle. For instance, given any point (x, y) on a carterian surface, we may readily define the basic trigonometric functions to be 
-  \begin{center}
-    sin\,{\uptheta} = $\displaystyle\frac{\text{x}}{{\text{(x\textsuperscript{2} + y\textsuperscript{2})}\textsuperscript{1/2}}}$, cos\,{\uptheta} = $\displaystyle\frac{\text{y}}{{\text{(x\textsuperscript{2} + y\textsuperscript{2})}\textsuperscript{1/2}}}$.
-  \end{center}
-  This definition relies on the assumption that (x\textsuperscript{2} + y\textsuperscript{2})\textsuperscript{1/2} = r is a constant equal to the radius of the circle on which the trigonometry is defined. Jacobi's trigonometric functions extend these definitions to a generic path r(\uptheta) other than a circle. This leads to a simple generation of sine and cosine to \resizebox{12px}{5.5px}{\kalam\textls[0]{sn}} and \resizebox{12px}{5.5px}{\kalam\textls[0]{cn}}, along with a third function \resizebox{12.35px}{8.5px}{\kalam\textls[0]{dn}} that captures the variation in r(\uptheta):
-  \begin{center}
-    \resizebox{12px}{5.5px}{\kalam\textls[0]{sn}}\,\resizebox{6px}{5.2px}{\upmu} = $\displaystyle\frac{\;\;\text{x'}}{{\text{\upalpha}}}$, \resizebox{12px}{5.5px}{\kalam\textls[0]{cn}}\,\resizebox{6px}{5.2px}{\upmu} = $\displaystyle\frac{\;\;\text{y'}}{{\text{\upgamma}}}$, \resizebox{12.35px}{8.5px}{\kalam\textls[0]{dn}}\,\resizebox{6px}{5.2px}{\upmu} = $\displaystyle\frac{\text{1}}{{\text{r(\uptheta)}}}$.
-  \end{center}
-  \begin{flushright}
-    {\vspace{-8mm}\mono{(10)}}
-  \end{flushright}
-  \vspace{2mm}
-  There are two main differences to note: first is the appearance of a third trigonometric function \resizebox{12.35px}{8.5px}{\kalam\textls[0]{dn}} capturing the curvature of the path, and second is the change in argument from {\uptheta} to \resizebox{6px}{5.2px}{\upmu}. For the particular case of an elliptical path, \resizebox{6px}{5.2px}{\upmu} can be evaluated by considering equation (8) along with the implied equivalence to equation (5) such that
-  \begin{center}
-    \resizebox{6px}{5.2px}{\upmu}\;\;\equiv\;\;F(e,\,\raisebox{0.25mm}{\resizebox{7.5px}{5px}{\upvarphi}}) = \,{{\raisebox{-1mm}{\huge\mate{^^^^222b}}}\textsuperscript{\raisebox{2.5mm}{\footnotesize{\hspace{-0.10mm}{\upvarphi}}}}}{\hspace{-3mm}\textsubscript{\raisebox{-2.5mm}{\hspace{-0.15mm}\footnotesize{0}}}}\;r(\uptheta,\,e)\,{\resizebox{5px}{7px}{\updelta}}{\uptheta}, where
-  \end{center}
-  \begin{center}
-    r\;\;\equiv\;\;r(\uptheta,\,e) = $\displaystyle\frac{\text{1}}{\text{(1 - e\textsuperscript{2}sin\textsuperscript{2}{\uptheta})\textsuperscript{1/2}}}$
-  \end{center}
-  \begin{flushright}
-    {\vspace{-8mm}\mono{(11)}}
-  \end{flushright}
-  \vspace{2mm}
-  Note that \resizebox{6px}{5.2px}{\upmu} is the (re)definition of the argument of Jacobi's trigonometric functions and \resizebox{6px}{5.2px}{\upmu} = {\uptheta} for a circle. Similarly, \resizebox{12px}{5.5px}{\kalam\textls[0]{sn}} = sine, \resizebox{12px}{5.5px}{\kalam\textls[0]{cn}} = cosine and \resizebox{12.35px}{8.5px}{\kalam\textls[0]{dn}} = 1/r for a circle. Jacobi noted that the trajectory (aka topology) of an ellipse is completely described by two concentric circles that inscribe (radius \raisebox{0.25mm}{\resizebox{6.5px}{5px}{\upgamma}} = 1) and circumscribe (radius {\resizebox{7.25px}{5.3px}{\upalpha}}) the ellipse, and Jacobi's trigonomatric functions capture the projection of the ellipse (encased by the two circles) onto these two circles; these two circles is some sense form the basis of the elliptical topology. This geometric interpretation of Jacobi's functions is shown in figures \ref{fig:jacobi} and \ref{fig:dual}. \linebreak\linebreak
-  }}
-\end{flushleft}
-\begin{multicols}{2}
-  \noindent
-  \begin{minipage}{\linewidth}
-    \centering
-    \includegraphics[width=77.5mm]{./img/jacobiSine.png}\vspace{1mm}
-    \captionof{figure}{\textls[-50]{\mono{Jacobi's elliptic trigonometric functions}}}
-    \label{fig:jacobi}
-  \end{minipage}
-  \noindent
-  \begin{minipage}{\linewidth}
-    \centering
-    \includegraphics[width=77.5mm]{./img/dualTopology.png}\vspace{1mm}
-    \captionof{figure}{\textls[-50]{\mono{Split topology for ellipses underlying Jacobi's trigonometry}}}
-    \label{fig:dual}
   \end{minipage}
 \end{multicols}
 \begin{flushleft}
