@@ -25,6 +25,8 @@
   labelfont=bf,
   tableposition=top
 }
+\usepackage[abspath]{currfile}
+
 \captionsetup[figure]{name=\mono{Figure}}
 
 % ------------------------------------
@@ -96,11 +98,11 @@
 
 % ------------------------------------
 % fonts
-\newfontfamily\pro[Path=./fonts/]{SFMono.ttf}
-\newfontfamily\pbold[Path=./fonts/]{SFMonoSemiBold.ttf}
-\newfontfamily\mono[Path=./fonts/]{SFMono.ttf}
-\newfontfamily\mbold[Path=./fonts/]{SFMonoSemiBold.ttf}
-\newfontfamily\robot[Path=./fonts/]{Roboto.ttf}
+\newfontfamily\pro[Path=./]{__SFMono.ttf}
+\newfontfamily\pbold[Path=./]{__SFMonoSemiBold.ttf}
+\newfontfamily\mono[Path=./]{__SFMono.ttf}
+\newfontfamily\mbold[Path=./]{__SFMonoSemiBold.ttf}
+\newfontfamily\robot[Path=./]{__Roboto.ttf}
 
 % ------------------------------------
 % heading font-size
